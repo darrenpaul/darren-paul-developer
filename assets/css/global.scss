@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;500;700;900&family=Monoton&family=Syncopate:wght@400;700&family=Zen+Dots&display=swap');
+
+@import './elements.scss';
+@import './layout.scss';
+@import './animations.scss';
+@import './header.scss';
+@import './footer.scss';
+@import './projects.scss';
+
+/* SIZE */
+/* MARGINS AND PADDING */
+/* LAYOUT */
+/* BORDERS */
+/* COLORS */
+/* TEXT */
+/* ANIMATION AND EFFECTS */
+
+body {
+  @apply bg-yellow-300;
+}
+
+section {
+  /* SIZE */
+  @apply w-[calc(100vw-8rem)];
+  /* MARGINS AND PADDING */
+  /* LAYOUT */
+  /* BORDERS */
+  /* COLORS */
+  /* TEXT */
+  /* ANIMATION AND EFFECTS */
+}
+h1 {
+  /* SIZE */
+  /* MARGINS AND PADDING */
+  @apply m-0 p-0;
+  /* LAYOUT */
+  /* BORDERS */
+  /* COLORS */
+  @apply text-night-300;
+  /* TEXT */
+  @apply font-monoton text-7xl select-none;
+}
+
+h4 {
+  /* SIZE */
+  /* MARGINS AND PADDING */
+  @apply m-0 p-0;
+  /* LAYOUT */
+  /* BORDERS */
+  /* COLORS */
+  @apply text-night-300;
+  /* TEXT */
+  @apply font-kanit text-xl select-none;
+}
+
+p {
+  /* SIZE */
+  /* MARGINS AND PADDING */
+  @apply m-0 p-0;
+  /* LAYOUT */
+  /* BORDERS */
+  /* COLORS */
+  @apply text-night-400;
+  /* TEXT */
+}
+
+.section-heading {
+  /* SIZE */
+  @apply h-[6rem];
+  /* MARGINS AND PADDING */
+  @apply p-6;
+  /* LAYOUT */
+  @apply flex justify-end;
+  /* BORDERS */
+  /* COLORS */
+  /* TEXT */
+  @apply select-none;
+}
+
+.blur-effect {
+  /* SIZE */
+  @apply w-1/2 h-screen;
+  /* MARGINS AND PADDING */
+  /* LAYOUT */
+  @apply fixed top-0 right-0 -z-50 hidden sm:block;
+  /* BORDERS */
+  /* COLORS */
+  /* TEXT */
+  /* ANIMATION AND EFFECTS */
+  @apply backdrop-blur-sm;
+}
+
+.icon {
+  path {
+    /* SIZE */
+    /* MARGINS AND PADDING */
+    /* LAYOUT */
+    /* BORDERS */
+    /* COLORS */
+    @apply fill-night-400;
+    /* TEXT */
+    /* ANIMATION AND EFFECTS */
+  }
+  &:hover {
+    path {
+      /* SIZE */
+      /* MARGINS AND PADDING */
+      /* LAYOUT */
+      /* BORDERS */
+      /* COLORS */
+      @apply fill-night-300;
+      /* TEXT */
+      /* ANIMATION AND EFFECTS */
+    }
+  }
+}
