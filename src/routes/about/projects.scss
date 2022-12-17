@@ -1,0 +1,158 @@
+.projects-section {
+  /* SIZE */
+  // @apply h-screen;
+  /* MARGINS AND PADDING */
+  @apply ml-16;
+  /* LAYOUT */
+  /* BORDERS */
+  /* COLORS */
+  /* TEXT */
+}
+
+.projects-section-night {
+  /* SIZE */
+  // @apply h-screen;
+  /* MARGINS AND PADDING */
+  /* LAYOUT */
+  /* BORDERS */
+  /* COLORS */
+  @apply bg-night-200;
+  /* TEXT */
+}
+
+.projects {
+  /* SIZE */
+  @apply w-full h-[calc(100vh-6rem)];
+  /* MARGINS AND PADDING */
+  @apply p-4;
+  /* LAYOUT */
+  @apply flex gap-4 items-center;
+  /* BORDERS */
+  /* COLORS */
+  /* TEXT */
+
+  // TODO: DELETE
+  @apply overflow-x-scroll;
+}
+
+.project {
+  /* SIZE */
+  @apply w-96 h-full;
+  /* MARGINS AND PADDING */
+  /* LAYOUT */
+  @apply flex items-center flex-shrink-0;
+  /* BORDERS */
+  /* COLORS */
+  /* TEXT */
+
+  &:nth-child(even) {
+    .project-card {
+      /* SIZE */
+      /* MARGINS AND PADDING */
+      // @apply pt-20 hover:pt-0;
+      /* LAYOUT */
+      @apply translate-y-0 hover:translate-y-10;
+      /* BORDERS */
+      /* COLORS */
+      /* TEXT */
+      /* ANIMATION */
+      @apply transition-all duration-300 ease-in-out hover:duration-1000;
+    }
+  }
+  &:nth-child(odd) {
+    .project-card {
+      /* SIZE */
+      /* MARGINS AND PADDING */
+      // @apply pt-20 hover:pt-0;
+      /* LAYOUT */
+      @apply translate-y-0 hover:-translate-y-10;
+      /* BORDERS */
+      /* COLORS */
+      /* TEXT */
+      /* ANIMATION */
+      @apply transition-all duration-300 ease-in-out hover:duration-1000;
+    }
+    .project-thumbnail-title {
+      /* SIZE */
+      /* MARGINS AND PADDING */
+      /* LAYOUT */
+      @apply flex-col-reverse;
+      /* BORDERS */
+      /* COLORS */
+      /* TEXT */
+      .project-title {
+        /* SIZE */
+        /* MARGINS AND PADDING */
+        /* LAYOUT */
+        @apply items-end;
+        /* BORDERS */
+        /* COLORS */
+        /* TEXT */
+      }
+    }
+  }
+}
+
+.project-card {
+  /* SIZE */
+  /* MARGINS AND PADDING */
+  /* LAYOUT */
+  @apply flex;
+  /* BORDERS */
+  /* COLORS */
+  /* TEXT */
+
+  .project-thumbnail-title {
+    /* SIZE */
+    @apply w-full;
+    /* MARGINS AND PADDING */
+    /* LAYOUT */
+    @apply flex flex-col;
+    /* BORDERS */
+    /* COLORS */
+    /* TEXT */
+
+    .project-thumbnail {
+      /* SIZE */
+      /* MARGINS AND PADDING */
+      /* LAYOUT */
+      @apply overflow-hidden;
+      /* BORDERS */
+      @apply border-4;
+
+      img {
+        /* SIZE */
+        @apply w-full h-96;
+        /* MARGINS AND PADDING */
+        /* LAYOUT */
+        @apply object-cover object-center;
+        /* BORDERS */
+        /* COLORS */
+        /* TEXT */
+      }
+    }
+    .project-thumbnail-night {
+      /* COLORS */
+      @apply border-night-300;
+    }
+
+    .project-title {
+      /* SIZE */
+      @apply h-1/4;
+      /* MARGINS AND PADDING */
+      /* LAYOUT */
+      @apply flex justify-center;
+      /* BORDERS */
+      /* COLORS */
+      /* TEXT */
+    }
+  }
+}
+
+/* SIZE */
+/* MARGINS AND PADDING */
+/* LAYOUT */
+/* BORDERS */
+/* COLORS */
+/* TEXT */
+/* ANIMATION */

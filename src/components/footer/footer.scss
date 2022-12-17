@@ -1,0 +1,47 @@
+footer {
+  /* SIZE */
+  @apply w-16 h-screen;
+  /* MARGINS AND PADDING */
+  @apply py-3;
+  /* LAYOUT */
+  @apply absolute flex flex-col items-center justify-between z-50 top-0 right-0;
+  /* BORDERS */
+  @apply border-l-4;
+  /* COLORS */
+  @apply bg-night-100 border-night-300;
+}
+
+.social-icons {
+  /* SIZE */
+  /* MARGINS AND PADDING */
+  /* LAYOUT */
+  @apply flex flex-col gap-4;
+  /* BORDERS */
+  /* COLORS */
+  /* TEXT */
+  /* ANIMATION AND EFFECTS */
+}
+
+.copyright-wrapper {
+  /* SIZE */
+  /* MARGINS AND PADDING */
+  /* LAYOUT */
+  @apply flex flex-col items-center justify-center;
+  /* BORDERS */
+  /* COLORS */
+  /* TEXT */
+  /* ANIMATION AND EFFECTS */
+}
+.copyright {
+  /* SIZE */
+  /* MARGINS AND PADDING */
+  /* LAYOUT */
+  @apply rotate-180;
+  /* BORDERS */
+  /* COLORS */
+  /* TEXT */
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  /* ANIMATION AND EFFECTS */
+  @apply select-none;
+}

@@ -1,0 +1,117 @@
+header {
+  /* SIZE */
+  @apply w-16 h-screen;
+  /* LAYOUT */
+  @apply fixed flex flex-col z-50;
+  /* BORDERS */
+  @apply border-r-4;
+  /* COLORS */
+  @apply bg-night-100 border-night-300;
+}
+
+.navigation-menu-button {
+  /* SIZE */
+  @apply w-16 h-24;
+  /* MARGINS AND PADDING */
+  @apply py-2;
+  /* LAYOUT */
+  @apply grid gap-1 items-center justify-center;
+  /* BORDERS */
+  @apply border-b-4 border-r-4;
+  /* COLORS */
+  @apply border-night-300 hover:bg-night-300;
+}
+
+.navigation-menu {
+  /* SIZE */
+  @apply w-1/2 h-screen;
+  /* MARGINS AND PADDING */
+  @apply ml-16;
+  /* LAYOUT */
+  @apply fixed;
+  /* BORDERS */
+  @apply border-r-4;
+  /* COLORS */
+  @apply bg-night-100 border-night-300;
+}
+
+.navigation-menu-links {
+  /* SIZE */
+  @apply w-full;
+  /* MARGINS AND PADDING */
+  /* LAYOUT */
+  @apply flex flex-col;
+  /* BORDERS */
+  /* COLORS */
+  @apply text-night-300;
+}
+
+.navigation-menu-link {
+  /* SIZE */
+  /* MARGINS AND PADDING */
+  @apply p-2;
+  /* LAYOUT */
+  @apply flex justify-between flex-grow;
+  /* BORDERS */
+  @apply border-b-4;
+  /* COLORS */
+  @apply text-night-300 border-night-300 bg-night-200 hover:text-night-400 hover:border-night-400;
+}
+
+.navigation-menu-link-p {
+  /* TEXT */
+  @apply text-5xl;
+}
+
+.navigation-menu-link-small {
+  /* TEXT */
+  @apply text-xs;
+}
+
+.navigation-menu-link-active {
+  /* SIZE */
+  /* MARGINS AND PADDING */
+  @apply p-2;
+  /* LAYOUT */
+  @apply flex justify-between flex-grow;
+  /* BORDERS */
+  @apply border-b-4;
+  /* COLORS */
+  @apply text-night-200 border-night-300 bg-night-300 hover:text-night-400 hover:border-night-400;
+}
+
+.current-page {
+  /* SIZE */
+  @apply w-full h-full;
+  /* MARGINS AND PADDING */
+  /* LAYOUT */
+  @apply relative flex items-center justify-center;
+  /* BORDERS */
+  /* COLORS */
+  /* TEXT */
+  /* ANIMATION AND EFFECTS */
+
+  .current-page-title-wrapper {
+    /* SIZE */
+    /* MARGINS AND PADDING */
+    /* LAYOUT */
+    @apply absolute transform -rotate-90;
+    /* BORDERS */
+    /* COLORS */
+    /* TEXT */
+    /* ANIMATION AND EFFECTS */
+    @apply select-none;
+  }
+
+  .current-page-title {
+    /* SIZE */
+    /* MARGINS AND PADDING */
+    /* LAYOUT */
+    /* BORDERS */
+    /* COLORS */
+    @apply text-night-400;
+    /* TEXT */
+    @apply uppercase font-kanit text-4xl tracking-widest;
+    /* ANIMATION AND EFFECTS */
+  }
+}
