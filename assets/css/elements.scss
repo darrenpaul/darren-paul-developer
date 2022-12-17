@@ -1,0 +1,24 @@
+.icon {
+  path {
+    /* SIZE */
+    /* MARGINS AND PADDING */
+    /* LAYOUT */
+    /* BORDERS */
+    /* COLORS */
+    @apply fill-night-400;
+    /* TEXT */
+    /* ANIMATION AND EFFECTS */
+  }
+  &:hover {
+    path {
+      /* SIZE */
+      /* MARGINS AND PADDING */
+      /* LAYOUT */
+      /* BORDERS */
+      /* COLORS */
+      @apply fill-night-300;
+      /* TEXT */
+      /* ANIMATION AND EFFECTS */
+    }
+  }
+}
