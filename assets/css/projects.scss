@@ -4,7 +4,7 @@
   /* MARGINS AND PADDING */
   @apply m-0 sm:m-0 sm:ml-16;
   /* LAYOUT */
-  @apply relative;
+  @apply relative overflow-hidden;
   /* BORDERS */
   /* COLORS */
   @apply bg-night-200;
@@ -37,8 +37,9 @@
 
 .project {
   /* SIZE */
-  @apply w-full lg:w-1/3 h-full;
+  @apply w-full lg:w-1/3 h-[calc(100vh-8rem)] sm:h-full;
   /* MARGINS AND PADDING */
+  @apply m-0 mt-16 sm:m-0;
   /* LAYOUT */
   @apply flex gap-6 flex-col items-center justify-center flex-shrink-0;
   /* BORDERS */
