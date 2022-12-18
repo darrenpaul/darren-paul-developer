@@ -13,7 +13,7 @@
 
 .projects {
   /* SIZE */
-  @apply w-full h-full;
+  @apply w-full h-[calc(100vh-8rem)] sm:h-full;
   /* MARGINS AND PADDING */
   @apply m-0 mt-16 sm:m-0;
   /* LAYOUT */
