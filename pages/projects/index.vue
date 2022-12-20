@@ -1,45 +1,43 @@
 <template>
-  <div>
-    <section class="projects-section">
-      <div id="projects" ref="projectsElement" class="projects">
-        <a
-          v-for="({ _id, slug, title, synopsis, thumbnailImage, publishedAt }, index) in projects"
-          :key="_id"
-          class="project"
-          :href="slug"
-        >
-          <div class="project-index">
-            <h1 class="project-index-title">{{ String(index + 1).padStart(2, '0') }}</h1>
-          </div>
+  <section class="projects-section">
+    <div id="projects" ref="projectsElement" class="projects">
+      <a
+        v-for="({ _id, slug, title, synopsis, thumbnailImage, publishedAt }, index) in projects"
+        :key="_id"
+        class="project"
+        :href="slug"
+      >
+        <div class="project-index">
+          <h1 class="project-index-title">{{ String(index + 1).padStart(2, '0') }}</h1>
+        </div>
 
-          <div class="project-card">
-            <div class="project-thumbnail-title">
-              <div class="project-title">
-                <h4>{{ title }}</h4>
-                <p>{{ synopsis }}</p>
-              </div>
+        <div class="project-card">
+          <div class="project-thumbnail-title">
+            <div class="project-title">
+              <h4>{{ title }}</h4>
+              <p class="light-text">{{ synopsis }}</p>
+            </div>
 
-              <div class="project-thumbnail">
-                <img :src="thumbnailImage" />
-              </div>
+            <div class="project-thumbnail">
+              <img :src="thumbnailImage" />
             </div>
           </div>
-          <div class="project-index">
-            <p>{{ dayjs(publishedAt).format(DATE_FORMAT) }}</p>
-          </div>
-        </a>
-      </div>
+        </div>
+        <div class="project-index">
+          <p class="light-text">{{ dayjs(publishedAt).format(DATE_FORMAT) }}</p>
+        </div>
+      </a>
+    </div>
 
-      <div class="project-action-buttons">
-        <button class="project-action-button" @click="onArrowLeftClick">
-          <ArrowLeftIcon />
-        </button>
-        <button class="project-action-button" @click="onArrowRightClick">
-          <ArrowRightIcon />
-        </button>
-      </div>
-    </section>
-  </div>
+    <div class="project-action-buttons">
+      <button class="project-action-button" @click="onArrowLeftClick">
+        <ArrowLeftIcon />
+      </button>
+      <button class="project-action-button" @click="onArrowRightClick">
+        <ArrowRightIcon />
+      </button>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">

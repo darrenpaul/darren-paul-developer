@@ -4,7 +4,7 @@ footer {
   /* MARGINS AND PADDING */
   @apply p-0 px-3 sm:p-0 sm:py-3;
   /* LAYOUT */
-  @apply absolute flex flex-row sm:flex-col items-center justify-between z-50 bottom-0 sm:top-0 sm:right-0;
+  @apply fixed flex flex-row sm:flex-col items-center justify-between z-50 bottom-0 sm:top-0 sm:right-0;
   /* BORDERS */
   @apply border-0 border-t-4 sm:border-0 sm:border-l-4;
   /* COLORS */

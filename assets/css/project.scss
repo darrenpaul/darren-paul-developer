@@ -1,0 +1,56 @@
+/* SIZE */
+/* MARGINS AND PADDING */
+/* LAYOUT */
+/* BORDERS */
+/* COLORS */
+/* TEXT */
+/* ANIMATION AND EFFECTS */
+
+.project-section {
+  /* SIZE */
+  @apply w-screen sm:w-full;
+  /* MARGINS AND PADDING */
+  @apply m-0 pt-16 sm:m-0 sm:ml-16 sm:p-4;
+  /* LAYOUT */
+  @apply flex flex-col;
+  /* BORDERS */
+  /* COLORS */
+  @apply bg-night-200;
+  /* TEXT */
+  /* ANIMATION AND EFFECTS */
+
+  .project-image {
+    /* SIZE */
+    @apply w-auto h-[calc(100vh-2rem)];
+    /* MARGINS AND PADDING */
+    /* LAYOUT */
+    @apply relative;
+    /* BORDERS */
+    @apply border-double border-8;
+    /* COLORS */
+    @apply border-night-400;
+
+    img {
+      /* SIZE */
+      @apply w-full h-full;
+      /* MARGINS AND PADDING */
+      /* LAYOUT */
+      @apply object-cover object-center;
+      /* BORDERS */
+      /* COLORS */
+      /* TEXT */
+    }
+  }
+
+  .project-action-buttons {
+    /* SIZE */
+    @apply w-full;
+    /* MARGINS AND PADDING */
+    /* LAYOUT */
+    @apply absolute flex items-center justify-center bottom-0 gap-4;
+    /* BORDERS */
+    /* COLORS */
+    @apply bg-black/[0.3];
+    /* TEXT */
+  }
+}
