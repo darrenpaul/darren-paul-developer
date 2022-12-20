@@ -21,25 +21,96 @@
 
   .project-image {
     /* SIZE */
-    @apply w-auto h-[calc(100vh-2rem)];
+    @apply w-full h-fit;
+    // @apply w-full h-[calc(100vh-2rem)];
     /* MARGINS AND PADDING */
+    @apply mx-auto;
     /* LAYOUT */
     @apply relative;
     /* BORDERS */
     @apply border-double border-8;
     /* COLORS */
     @apply border-night-400;
-
+    iframe {
+      /* SIZE */
+      @apply w-full h-screen;
+      /* MARGINS AND PADDING */
+      /* LAYOUT */
+      /* BORDERS */
+      /* COLORS */
+      @apply bg-white;
+      /* TEXT */
+    }
     img {
       /* SIZE */
       @apply w-full h-full;
       /* MARGINS AND PADDING */
       /* LAYOUT */
-      @apply object-cover object-center;
+      @apply object-contain object-center;
       /* BORDERS */
       /* COLORS */
       /* TEXT */
     }
+  }
+
+  .project-details {
+    /* SIZE */
+    /* MARGINS AND PADDING */
+    @apply mt-4;
+    /* LAYOUT */
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-4;
+    /* BORDERS */
+    /* COLORS */
+    /* TEXT */
+  }
+
+  .project-card {
+    /* SIZE */
+    @apply h-fit;
+    /* MARGINS AND PADDING */
+    /* LAYOUT */
+    /* BORDERS */
+    @apply border-double border-8;
+    /* COLORS */
+    @apply border-night-400;
+    /* TEXT */
+  }
+
+  .project-content {
+    /* SIZE */
+    @apply w-full h-full;
+    /* MARGINS AND PADDING */
+    @apply p-8;
+    /* LAYOUT */
+    /* BORDERS */
+    @apply border-double border-8;
+    /* COLORS */
+    @apply bg-night-400 border-night-400;
+    /* TEXT */
+  }
+
+  .project-frameworks {
+    /* SIZE */
+    @apply w-full h-fit;
+    /* MARGINS AND PADDING */
+    @apply p-8;
+    /* LAYOUT */
+    @apply flex flex-wrap gap-4;
+    /* BORDERS */
+    @apply border-double border-8;
+    /* COLORS */
+    @apply bg-night-400 border-night-400;
+    /* TEXT */
+  }
+
+  .project-framework-logo {
+    /* SIZE */
+    @apply w-auto h-12;
+    /* MARGINS AND PADDING */
+    /* LAYOUT */
+    /* BORDERS */
+    /* COLORS */
+    /* TEXT */
   }
 
   .project-action-buttons {
