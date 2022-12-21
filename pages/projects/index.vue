@@ -19,7 +19,7 @@
             </div>
 
             <div class="project-thumbnail">
-              <img :src="thumbnailImage" />
+              <img :src="thumbnailImage" :alt="title" />
             </div>
           </div>
         </div>

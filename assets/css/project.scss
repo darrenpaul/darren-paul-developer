@@ -10,7 +10,7 @@
   /* SIZE */
   @apply w-screen sm:w-full;
   /* MARGINS AND PADDING */
-  @apply m-0 pt-16 sm:m-0 sm:ml-16 sm:p-4;
+  @apply m-0 p-0 py-16 sm:m-0 sm:ml-16 sm:p-0 sm:px-16 sm:py-8;
   /* LAYOUT */
   @apply flex flex-col;
   /* BORDERS */
@@ -31,6 +31,7 @@
     @apply border-double border-8;
     /* COLORS */
     @apply border-night-400;
+
     iframe {
       /* SIZE */
       @apply w-full h-screen;
@@ -58,7 +59,6 @@
     /* MARGINS AND PADDING */
     @apply mt-4;
     /* LAYOUT */
-    @apply grid grid-cols-1 lg:grid-cols-2 gap-4;
     /* BORDERS */
     /* COLORS */
     /* TEXT */
@@ -91,15 +91,11 @@
 
   .project-frameworks {
     /* SIZE */
-    @apply w-full h-fit;
     /* MARGINS AND PADDING */
-    @apply p-8;
     /* LAYOUT */
     @apply flex flex-wrap gap-4;
     /* BORDERS */
-    @apply border-double border-8;
     /* COLORS */
-    @apply bg-night-400 border-night-400;
     /* TEXT */
   }
 

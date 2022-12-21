@@ -19,16 +19,17 @@
       <div class="project-card">
         <div class="project-content">
           <SanityContent :blocks="project.description" :serializers="serializers" />
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-frameworks">
-          <img
-            v-for="(framework, index) in project.frameworks"
-            :key="index"
-            class="project-framework-logo"
-            :src="FRAMEWORK_LOGOS[framework]?.logo"
-          />
+
+          <h3>{{ PROJECT_COPY.frameworks }}</h3>
+          <div class="project-frameworks">
+            <img
+              v-for="(framework, index) in project.frameworks"
+              :key="index"
+              class="project-framework-logo"
+              :src="FRAMEWORK_LOGOS[framework]?.logo"
+              :alt="FRAMEWORK_LOGOS[framework]?.alt"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -37,6 +38,7 @@
 
   <script setup lang="ts">
 import { FRAMEWORK_LOGOS } from '~~/constants/logos'
+import { PROJECT_COPY } from '~~/constants/copy'
 
 const serializers = {
   // types: {

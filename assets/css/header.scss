@@ -57,7 +57,7 @@ header {
   /* COLORS */
   @apply text-night-300 border-night-300 bg-night-200;
   /* TEXT */
-  @apply select-none;
+  @apply select-none no-underline;
   /* ANIMATION AND EFFECTS */
   @apply cursor-pointer;
 
@@ -97,7 +97,7 @@ header {
   /* BORDERS */
   @apply border-b-4;
   /* COLORS */
-  @apply text-night-200 border-night-300 bg-night-300 hover:border-night-300;
+  @apply text-night-200 border-night-400 bg-night-300 hover:border-night-400;
 
   .navigation-menu-link-p {
     /* COLORS */
@@ -109,6 +109,7 @@ header {
     @apply text-night-200;
   }
   &:hover {
+    /* COLORS */
     .navigation-menu-link-p {
       /* COLORS */
       @apply text-night-200;

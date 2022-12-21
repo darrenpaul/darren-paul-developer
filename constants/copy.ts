@@ -100,12 +100,19 @@ export const HOME_COPY = {
   meta: {
     title: `Home | ${META_TITLE}`
   },
+  darrenPaul: "Darren Paul",
+  frontendDeveloper: "Front-end Developer",
+  latestProjects: "Latest Projects"
 }
 
 export const PROJECTS_COPY = {
   meta: {
     title: `Projects | ${META_TITLE}`
   },
+}
+
+export const PROJECT_COPY = {
+  frameworks: "Frameworks"
 }
 
 export const CONTACT_COPY = {
