@@ -1,7 +1,8 @@
 .home-section {
   /* SIZE */
+  @apply w-screen sm:w-full;
   /* MARGINS AND PADDING */
-  @apply ml-16 px-16 pt-8 pb-2;
+  @apply p-0 p-2 m-0 sm:ml-16 sm:p-0 sm:px-16 sm:pt-8 sm:pb-2;
   /* LAYOUT */
   /* BORDERS */
   /* COLORS */
@@ -26,17 +27,29 @@
 
   .projects {
     /* SIZE */
-    @apply w-full h-screen;
+    @apply w-full h-auto min-h-screen;
     /* MARGINS AND PADDING */
-    @apply py-16;
+    @apply p-4;
     /* LAYOUT */
-    @apply flex items-center justify-center;
+    @apply flex flex-col xl:flex-row items-center justify-center;
     /* BORDERS */
     @apply border-double border-b-8;
     /* COLORS */
     @apply border-night-300;
     /* TEXT */
     /* ANIMATION AND EFFECTS */
+
+    .project-list {
+      /* SIZE */
+      @apply w-fit h-full;
+      /* MARGINS AND PADDING */
+      /* LAYOUT */
+      @apply flex flex-grow flex-col xl:flex-row;
+      /* BORDERS */
+      /* COLORS */
+      /* TEXT */
+      /* ANIMATION AND EFFECTS */
+    }
 
     a {
       /* TEXT */
@@ -45,12 +58,13 @@
 
     .project {
       /* SIZE */
-      @apply w-1/3 h-full;
+      @apply w-full xl:w-96 h-auto xl:h-screen;
       /* MARGINS AND PADDING */
+      @apply p-8;
       /* LAYOUT */
       @apply flex gap-6 flex-col items-center justify-center flex-shrink-0;
       /* BORDERS */
-      @apply border-0 border-b-4 lg:border-0;
+      @apply border-0 border-b-4 xl:border-0;
       /* COLORS */
       @apply border-night-300 hover:border-night-400;
       /* TEXT */
