@@ -21,7 +21,7 @@
     /* COLORS */
     @apply border-night-300;
     /* TEXT */
-    @apply text-right;
+    @apply text-center sm:text-right;
     /* ANIMATION AND EFFECTS */
   }
 
@@ -64,7 +64,7 @@
       /* LAYOUT */
       @apply flex gap-6 flex-col items-center justify-center flex-shrink-0;
       /* BORDERS */
-      @apply border-0 border-b-4 xl:border-0;
+      @apply border-0 border-t-4 xl:border-0;
       /* COLORS */
       @apply border-night-300 hover:border-night-400;
       /* TEXT */
