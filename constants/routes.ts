@@ -10,11 +10,6 @@ export const PROJECTS_ROUTE = {
   path: "/projects/",
 };
 
-export const ABOUT_ROUTE = {
-  name: "About",
-  key: "about",
-  path: "/about/",
-};
 
 export const CONTACT_ROUTE = {
   name: "Contact",
@@ -22,4 +17,4 @@ export const CONTACT_ROUTE = {
   path: "/contact/",
 };
 
-export const ROUTES = [HOME_ROUTE, PROJECTS_ROUTE, ABOUT_ROUTE, CONTACT_ROUTE];
+export const ROUTES = [HOME_ROUTE, PROJECTS_ROUTE, CONTACT_ROUTE];

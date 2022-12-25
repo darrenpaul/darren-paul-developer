@@ -9,6 +9,7 @@ h1 {
   /* TEXT */
   @apply font-monoton text-3xl md:text-7xl select-none;
 }
+
 h2 {
   /* SIZE */
   /* MARGINS AND PADDING */
@@ -80,6 +81,52 @@ a {
   @apply underline underline-offset-4;
 }
 
+button {
+  /* SIZE */
+  /* MARGINS AND PADDING */
+  @apply p-2;
+  /* LAYOUT */
+  /* BORDERS */
+  /* COLORS */
+  @apply text-night-100 bg-night-400 hover:bg-night-300;
+  /* TEXT */
+  @apply uppercase font-bold;
+}
+
+label {
+  /* SIZE */
+  /* MARGINS AND PADDING */
+  /* LAYOUT */
+  /* BORDERS */
+  /* COLORS */
+  @apply text-night-300;
+  /* TEXT */
+}
+
+input,
+textarea {
+  /* SIZE */
+  /* MARGINS AND PADDING */
+  @apply p-2;
+  /* LAYOUT */
+  /* BORDERS */
+  @apply border-4;
+  /* COLORS */
+  @apply border-night-300 bg-night-400 text-night-200 active:bg-night-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-night-200;
+  /* TEXT */
+}
+
+textarea {
+  /* SIZE */
+  @apply h-32;
+  /* MARGINS AND PADDING */
+  /* LAYOUT */
+  /* BORDERS */
+  /* COLORS */
+  /* TEXT */
+  @apply resize-none;
+}
+
 .icon {
   path {
     /* SIZE */
@@ -115,4 +162,17 @@ a {
   /* COLORS */
   @apply border-night-400;
   /* TEXT */
+}
+
+.error {
+  /* SIZE */
+  /* MARGINS AND PADDING */
+  @apply py-1 px-2;
+  /* LAYOUT */
+  /* BORDERS */
+  /* COLORS */
+  @apply bg-red-400 text-night-400;
+  /* TEXT */
+  @apply font-bold;
+  /* ANIMATION AND EFFECTS */
 }

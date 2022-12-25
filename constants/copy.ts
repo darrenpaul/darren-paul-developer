@@ -124,17 +124,22 @@ export const CONTACT_COPY = {
       href: `${DOMAIN}/contact`
     }
   },
-}
-
-export const ABOUT_COPY = {
-  meta: {
-    title: `About | ${META_TITLE}`,
-    link: {
-      hid: 'canonical',
-      rel: 'canonical',
-      href: `${DOMAIN}/about`
-    }
-  },
+  title: "Wanna get in touch?",
+  description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  name: "Name",
+  namePlaceholder: "Enter your name",
+  nameErrorEmpty: "Please provide a name",
+  nameErrorInvalid: "Invalid characters",
+  emailAddress: "Email Address",
+  emailAddressPlaceholder: "Enter your email address",
+  emailErrorEmpty: "Please provide a email",
+  emailErrorInvalid: "Invalid email address",
+  subject: "Subject",
+  subjectPlaceholder: "Enter the subject for your message",
+  message: "Message",
+  messagePlaceholder: "Enter your message",
+  messageErrorEmpty: "Please provide a message",
+  sendMessage: 'Send Message'
 }
 
 export const FOOTER_COPY = {
