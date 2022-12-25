@@ -4,6 +4,7 @@
       <div class="contact-description-card">
         <div class="contact-description">
           <h3>{{ CONTACT_COPY.title }}</h3>
+
           <p>
             {{ CONTACT_COPY.description }}
           </p>
@@ -13,21 +14,61 @@
       <form>
         <div class="form-group">
           <div class="input-group">
-            <label>{{ CONTACT_COPY.name }}</label>
-            <input v-model="name" :placeholder="CONTACT_COPY.namePlaceholder" name="name" type="name" />
-            <small v-if="nameError" class="error">{{ nameError }}</small>
+            <div class="label-group">
+              <label>{{ CONTACT_COPY.name }}</label>
+              <small v-if="nameError" class="error">{{ CONTACT_COPY.invalidInput }}</small>
+            </div>
+            <input
+              v-model="name"
+              :placeholder="CONTACT_COPY.namePlaceholder"
+              name="name"
+              type="name"
+              @input="onNameChange"
+            />
           </div>
+
           <div class="input-group">
-            <label>{{ CONTACT_COPY.emailAddress }}</label>
-            <input v-model="email" :placeholder="CONTACT_COPY.emailAddressPlaceholder" name="email" type="email" />
-            <small v-if="emailError" class="error">{{ emailError }}</small>
+            <div class="label-group">
+              <label>{{ CONTACT_COPY.emailAddress }}</label>
+              <small v-if="emailError" class="error">{{ CONTACT_COPY.invalidInput }}</small>
+            </div>
+            <input
+              v-model="email"
+              :placeholder="CONTACT_COPY.emailAddressPlaceholder"
+              name="email"
+              type="email"
+              @input="onEmailChange"
+            />
           </div>
         </div>
-        <label>{{ CONTACT_COPY.subject }}</label>
-        <input v-model="subject" :placeholder="CONTACT_COPY.subjectPlaceholder" name="subject" type="subject" />
-        <label>{{ CONTACT_COPY.message }}</label>
-        <textarea v-model="message" :placeholder="CONTACT_COPY.messagePlaceholder" name="message" type="message" />
-        <small v-if="messageError" class="error">{{ messageError }}</small>
+
+        <div class="input-group">
+          <div class="label-group">
+            <label>{{ CONTACT_COPY.subject }}</label>
+            <small v-if="subjectError" class="error">{{ CONTACT_COPY.invalidInput }}</small>
+          </div>
+          <input
+            v-model="subject"
+            :placeholder="CONTACT_COPY.subjectPlaceholder"
+            name="subject"
+            type="subject"
+            @input="onSubjectChange"
+          />
+        </div>
+
+        <div class="input-group">
+          <div class="label-group">
+            <label>{{ CONTACT_COPY.message }}</label>
+            <small v-if="messageError" class="error">{{ CONTACT_COPY.invalidInput }}</small>
+          </div>
+          <textarea
+            v-model="message"
+            :placeholder="CONTACT_COPY.messagePlaceholder"
+            name="message"
+            type="message"
+            @input="onMessageChange"
+          />
+        </div>
 
         <button class="contact-button" @click="handleSendMessage">{{ CONTACT_COPY.sendMessage }}</button>
       </form>
@@ -35,37 +76,76 @@
   </section>
 </template>
 
-    <script setup lang="ts">
+<script setup lang="ts">
 import isEmail from 'validator/es/lib/isEmail'
 import isAlpha from 'validator/es/lib/isAlpha'
 import { CONTACT_COPY } from '~~/constants/copy'
 
 const name = ref('')
-const nameError = ref('')
+const nameError = ref(false)
 const email = ref('')
-const emailError = ref('')
+const emailError = ref(false)
 const subject = ref('')
+const subjectError = ref(false)
 const message = ref('')
-const messageError = ref('')
+const messageError = ref(false)
+
+const validateName = () => {
+  nameError.value = false
+  if (!name.value) {
+    nameError.value = true
+  }
+  if (!isAlpha(name.value)) {
+    nameError.value = true
+  }
+}
+
+const validateEmail = () => {
+  emailError.value = false
+  if (!email.value) {
+    emailError.value = true
+  }
+  if (!isEmail(email.value)) {
+    emailError.value = true
+  }
+}
+
+const validateSubject = () => {
+  subjectError.value = false
+  if (!subject.value) {
+    subjectError.value = true
+  }
+}
+
+const validateMessage = () => {
+  messageError.value = false
+  if (!message.value) {
+    messageError.value = true
+  }
+}
+
+const onNameChange = () => {
+  validateName()
+}
+
+const onEmailChange = () => {
+  validateEmail()
+}
+
+const onSubjectChange = () => {
+  validateSubject()
+}
+
+const onMessageChange = () => {
+  validateMessage()
+}
 
 const handleSendMessage = async (event) => {
   event.preventDefault()
 
-  if (!name.value) {
-    nameError.value = CONTACT_COPY.nameErrorEmpty
-  }
-  if (!email.value) {
-    emailError.value = CONTACT_COPY.emailErrorEmpty
-  }
-  if (!message.value) {
-    messageError.value = CONTACT_COPY.messageErrorEmpty
-  }
-
-  if (!isAlpha(name.value)) {
-    nameError.value = CONTACT_COPY.nameErrorInvalid
-  }
-  if (!isEmail(email.value)) {
-    emailError.value = CONTACT_COPY.emailErrorInvalid
-  }
+  validateName()
+  validateEmail()
+  validateSubject()
+  validateMessage()
 }
 </script>

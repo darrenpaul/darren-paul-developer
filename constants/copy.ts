@@ -132,13 +132,11 @@ export const CONTACT_COPY = {
   nameErrorInvalid: "Invalid characters",
   emailAddress: "Email Address",
   emailAddressPlaceholder: "Enter your email address",
-  emailErrorEmpty: "Please provide a email",
-  emailErrorInvalid: "Invalid email address",
   subject: "Subject",
-  subjectPlaceholder: "Enter the subject for your message",
+  subjectPlaceholder: "Enter a subject for message",
   message: "Message",
   messagePlaceholder: "Enter your message",
-  messageErrorEmpty: "Please provide a message",
+  invalidInput: "Invalid",
   sendMessage: 'Send Message'
 }
 
