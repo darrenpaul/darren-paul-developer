@@ -17,7 +17,7 @@ header {
   /* LAYOUT */
   @apply flex flex-row sm:flex-col gap-1 items-center justify-center;
   /* BORDERS */
-  @apply border-0 border-r-4 sm:border-0 sm:border-b-4 sm:border-r-4;
+  @apply border-0 border-b-4 border-r-4 sm:border-0 sm:border-b-4 sm:border-r-4;
   /* COLORS */
   @apply border-night-300 hover:bg-night-300 bg-night-100;
 }

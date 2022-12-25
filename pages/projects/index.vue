@@ -48,7 +48,7 @@ import { ROUTES } from '~~/constants/routes'
 
 useHead({ ...PROJECTS_COPY })
 
-const { data: projects } = await useFetch('/api/projects')
+const { data: projects, pending } = await useFetch('/api/projects')
 
 const projectIndex = ref(3)
 const projectsElement = ref(null)
