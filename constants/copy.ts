@@ -136,7 +136,8 @@ export const CONTACT_COPY = {
   message: "Message",
   messagePlaceholder: "I would love to have a website designed by you, please get in-touch.",
   invalidInput: "Invalid",
-  sendMessage: 'Send Message'
+  sendMessage: 'Send Message',
+  messageSent: "Message has been sent"
 }
 
 export const FOOTER_COPY = {

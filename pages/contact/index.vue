@@ -75,6 +75,13 @@
         <button class="contact-button" @click="handleSendMessage">{{ CONTACT_COPY.sendMessage }}</button>
       </form>
     </div>
+
+    <Notification
+      :show="showNotification"
+      :message="notificationMessage"
+      :type="notificationType"
+      :on-timer-end="onNotifcationTimerEnd"
+    />
   </section>
 </template>
 
@@ -84,6 +91,10 @@ import isAlpha from 'validator/es/lib/isAlpha'
 import { CONTACT_COPY } from '~~/constants/copy'
 
 const { data: contact } = await useFetch('/api/contact')
+
+const showNotification = ref(false)
+const notificationMessage = ref(CONTACT_COPY.messageSent)
+const notificationType = ref('success')
 
 const name = ref('')
 const nameError = ref(false)
@@ -144,6 +155,10 @@ const onMessageChange = () => {
   validateMessage()
 }
 
+const onNotifcationTimerEnd = (value) => {
+  showNotification.value = value
+}
+
 const handleSendMessage = async (event) => {
   event.preventDefault()
 
@@ -152,7 +167,10 @@ const handleSendMessage = async (event) => {
   validateSubject()
   validateMessage()
 
-  if (!nameError && !emailError && !subjectError && !messageError) {
+  notificationMessage.value = CONTACT_COPY.messageSent
+  notificationType.value = 'success'
+  showNotification.value = true
+  if (nameError.value || emailError.value || subjectError.value || messageError.value) {
     return
   }
 
@@ -167,15 +185,22 @@ const handleSendMessage = async (event) => {
       }
     })
 
-    // name.value = ''
-    // email.value = ''
-    // subject.value = ''
-    // message.value = ''
-    // nameError.value = false
-    // emailError.value = false
-    // subjectError.value = false
-    // messageError.value = false
-    // alert('Message send')
-  } catch (error) {}
+    name.value = ''
+    email.value = ''
+    subject.value = ''
+    message.value = ''
+    nameError.value = false
+    emailError.value = false
+    subjectError.value = false
+    messageError.value = false
+
+    notificationMessage.value = CONTACT_COPY.messageSent
+    notificationType.value = 'success'
+    showNotification.value = true
+  } catch (error) {
+    notificationMessage.value = error.message
+    notificationType.value = 'error'
+    showNotification.value = true
+  }
 }
 </script>

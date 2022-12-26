@@ -1,0 +1,45 @@
+.notification {
+  @apply fixed top-20 right-0 cursor-pointer m-0 sm:m-0 sm:mr-16;
+  .notification-card {
+    @apply flex items-center justify-center py-3 px-6 rounded-tl-full rounded-bl-full drop-shadow;
+    .notification-message {
+      @apply p-0 m-0;
+    }
+  }
+
+  .notification-error {
+    @apply bg-red-600/[0.8];
+    .notification-message {
+      @apply text-white;
+    }
+  }
+  .notification-warn {
+    @apply bg-orange-400/[0.8];
+  }
+  .notification-info {
+    @apply bg-white/[0.8];
+    .notification-message {
+      @apply text-black;
+    }
+  }
+  .notification-success {
+    @apply bg-black/[0.8];
+    .notification-message {
+      @apply text-white;
+    }
+  }
+}
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
