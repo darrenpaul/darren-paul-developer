@@ -1,6 +1,6 @@
 <template>
   <section class="contact-section">
-    <h1>{{ CONTACT_COPY.title }}</h1>
+    <h1 class="contact-title">{{ CONTACT_COPY.title }}</h1>
     <div class="contact-container">
       <div class="contact-description-card">
         <div class="contact-description-content">
