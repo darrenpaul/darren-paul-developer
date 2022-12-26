@@ -167,9 +167,6 @@ const handleSendMessage = async (event) => {
   validateSubject()
   validateMessage()
 
-  notificationMessage.value = CONTACT_COPY.messageSent
-  notificationType.value = 'success'
-  showNotification.value = true
   if (nameError.value || emailError.value || subjectError.value || messageError.value) {
     return
   }
