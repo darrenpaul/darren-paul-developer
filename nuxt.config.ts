@@ -7,6 +7,8 @@ export default defineNuxtConfig({
     runtimeConfig: {
         SANITY_PROJECT_ID: process.env.SANITY_PROJECT_ID,
         SANITY_DATASET: process.env.SANITY_DATASET,
+        EMAIL_SERVER: process.env.EMAIL_SERVER,
+        SEND_TO_EMAIL: process.env.SEND_TO_EMAIL,
         sanity: {
             token: process.env.NUXT_SANITY_TOKEN
         }

@@ -99,7 +99,7 @@ const validateName = () => {
   if (!name.value) {
     nameError.value = true
   }
-  if (!isAlpha(name.value)) {
+  if (!isAlpha(name.value, 'en-US', { ignore: ' ' })) {
     nameError.value = true
   }
 }
@@ -151,5 +151,31 @@ const handleSendMessage = async (event) => {
   validateEmail()
   validateSubject()
   validateMessage()
+
+  if (!nameError && !emailError && !subjectError && !messageError) {
+    return
+  }
+
+  try {
+    await $fetch('/api/message', {
+      method: 'POST',
+      params: {
+        name: name.value,
+        email: email.value,
+        subject: subject.value,
+        message: message.value
+      }
+    })
+
+    // name.value = ''
+    // email.value = ''
+    // subject.value = ''
+    // message.value = ''
+    // nameError.value = false
+    // emailError.value = false
+    // subjectError.value = false
+    // messageError.value = false
+    // alert('Message send')
+  } catch (error) {}
 }
 </script>
