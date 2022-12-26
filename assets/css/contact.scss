@@ -36,7 +36,7 @@
 
   .contact-description-card {
     /* SIZE */
-    @apply w-full lg:w-fit;
+    @apply w-auto lg:w-fit;
     /* MARGINS AND PADDING */
     @apply m-4;
     /* LAYOUT */
@@ -59,7 +59,7 @@
 
   .contact-form {
     /* SIZE */
-    @apply w-full lg:w-fit;
+    @apply w-auto lg:w-fit;
     /* MARGINS AND PADDING */
     @apply m-4;
     /* LAYOUT */
