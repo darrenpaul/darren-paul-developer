@@ -4,91 +4,91 @@
   /* MARGINS AND PADDING */
   @apply p-0 p-2 py-16 m-0 sm:ml-16 sm:p-0 sm:px-16 sm:pt-8 sm:pb-2;
   /* LAYOUT */
-  @apply flex justify-center items-center;
+  @apply flex flex-col justify-center items-center;
   /* BORDERS */
   /* COLORS */
   @apply bg-night-100;
   /* TEXT */
   /* ANIMATION AND EFFECTS */
 
-  .contact {
+  .contact-container {
     /* SIZE */
     @apply h-full;
     /* MARGINS AND PADDING */
     /* LAYOUT */
-    @apply grid grid-cols-1 sm:grid-cols-2 justify-center items-start;
+    @apply grid grid-cols-1 lg:grid-cols-2 justify-center items-start;
     /* BORDERS */
     /* COLORS */
     /* TEXT */
     /* ANIMATION AND EFFECTS */
+  }
 
-    .contact-description-card {
-      /* SIZE */
-      /* MARGINS AND PADDING */
-      @apply m-4;
-      /* LAYOUT */
-      @apply overflow-hidden;
-      /* BORDERS */
-      @apply border-double border-8;
-      /* COLORS */
-      @apply border-night-400;
+  .contact-description-card {
+    /* SIZE */
+    /* MARGINS AND PADDING */
+    @apply m-4;
+    /* LAYOUT */
+    @apply overflow-hidden;
+    /* BORDERS */
+    @apply border-double border-8;
+    /* COLORS */
+    @apply border-night-400;
+  }
 
-      .contact-description {
-        /* SIZE */
-        /* MARGINS AND PADDING */
-        @apply p-4;
-        /* LAYOUT */
-        /* BORDERS */
-        /* COLORS */
-        @apply bg-night-400;
-      }
-    }
+  .contact-description-content {
+    /* SIZE */
+    /* MARGINS AND PADDING */
+    @apply p-4;
+    /* LAYOUT */
+    /* BORDERS */
+    /* COLORS */
+    @apply bg-night-400;
+  }
 
-    form {
-      /* SIZE */
-      /* MARGINS AND PADDING */
-      @apply m-4;
-      /* LAYOUT */
-      @apply flex flex-col;
-      /* BORDERS */
-      /* COLORS */
-      /* TEXT */
-      /* ANIMATION AND EFFECTS */
+  .contact-form {
+    /* SIZE */
+    /* MARGINS AND PADDING */
+    @apply m-4;
+    /* LAYOUT */
+    @apply flex flex-col;
+    /* BORDERS */
+    /* COLORS */
+    /* TEXT */
+    /* ANIMATION AND EFFECTS */
+  }
 
-      .form-group {
-        /* SIZE */
-        /* MARGINS AND PADDING */
-        /* LAYOUT */
-        @apply grid grid-cols-2 gap-4;
-        /* BORDERS */
-        /* COLORS */
-        /* TEXT */
-        /* ANIMATION AND EFFECTS */
-      }
+  .contact-form-group {
+    /* SIZE */
+    /* MARGINS AND PADDING */
+    /* LAYOUT */
+    @apply grid grid-cols-2 gap-4;
+    /* BORDERS */
+    /* COLORS */
+    /* TEXT */
+    /* ANIMATION AND EFFECTS */
+  }
 
-      .input-group {
-        /* SIZE */
-        /* MARGINS AND PADDING */
-        @apply mb-2;
-        /* LAYOUT */
-        @apply flex flex-col;
-        /* BORDERS */
-        /* COLORS */
-        /* TEXT */
-        /* ANIMATION AND EFFECTS */
-      }
+  .contact-input-group {
+    /* SIZE */
+    /* MARGINS AND PADDING */
+    @apply mb-2;
+    /* LAYOUT */
+    @apply flex flex-col;
+    /* BORDERS */
+    /* COLORS */
+    /* TEXT */
+    /* ANIMATION AND EFFECTS */
+  }
 
-      .label-group {
-        /* SIZE */
-        /* MARGINS AND PADDING */
-        /* LAYOUT */
-        @apply flex justify-between;
-        /* BORDERS */
-        /* COLORS */
-        /* TEXT */
-        /* ANIMATION AND EFFECTS */
-      }
-    }
+  .contact-label-group {
+    /* SIZE */
+    /* MARGINS AND PADDING */
+    /* LAYOUT */
+    @apply flex justify-between;
+    /* BORDERS */
+    /* COLORS */
+    /* TEXT */
+    /* ANIMATION AND EFFECTS */
   }
 
   .contact-button {

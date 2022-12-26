@@ -1,25 +1,24 @@
 <template>
   <section class="contact-section">
-    <div class="contact">
+    <h1>{{ CONTACT_COPY.title }}</h1>
+    <div class="contact-container">
       <div class="contact-description-card">
-        <div class="contact-description">
-          <h3>{{ CONTACT_COPY.title }}</h3>
-
-          <p>
-            {{ CONTACT_COPY.description }}
-          </p>
+        <div class="contact-description-content">
+          <SanityContent :blocks="contact.description" />
         </div>
       </div>
 
-      <form>
-        <div class="form-group">
-          <div class="input-group">
-            <div class="label-group">
+      <form class="contact-form">
+        <div class="contact-form-group">
+          <div class="contact-input-group">
+            <div class="contact-label-group">
               <label>{{ CONTACT_COPY.name }}</label>
               <small v-if="nameError" class="error">{{ CONTACT_COPY.invalidInput }}</small>
             </div>
+
             <input
               v-model="name"
+              :class="[nameError && 'input-error']"
               :placeholder="CONTACT_COPY.namePlaceholder"
               name="name"
               type="name"
@@ -27,13 +26,14 @@
             />
           </div>
 
-          <div class="input-group">
-            <div class="label-group">
+          <div class="contact-input-group">
+            <div class="contact-label-group">
               <label>{{ CONTACT_COPY.emailAddress }}</label>
               <small v-if="emailError" class="error">{{ CONTACT_COPY.invalidInput }}</small>
             </div>
             <input
               v-model="email"
+              :class="[emailError && 'input-error']"
               :placeholder="CONTACT_COPY.emailAddressPlaceholder"
               name="email"
               type="email"
@@ -42,13 +42,14 @@
           </div>
         </div>
 
-        <div class="input-group">
-          <div class="label-group">
+        <div class="contact-input-group">
+          <div class="contact-label-group">
             <label>{{ CONTACT_COPY.subject }}</label>
             <small v-if="subjectError" class="error">{{ CONTACT_COPY.invalidInput }}</small>
           </div>
           <input
             v-model="subject"
+            :class="[subjectError && 'input-error']"
             :placeholder="CONTACT_COPY.subjectPlaceholder"
             name="subject"
             type="subject"
@@ -56,13 +57,14 @@
           />
         </div>
 
-        <div class="input-group">
-          <div class="label-group">
+        <div class="contact-input-group">
+          <div class="contact-label-group">
             <label>{{ CONTACT_COPY.message }}</label>
             <small v-if="messageError" class="error">{{ CONTACT_COPY.invalidInput }}</small>
           </div>
           <textarea
             v-model="message"
+            :class="[messageError && 'input-error']"
             :placeholder="CONTACT_COPY.messagePlaceholder"
             name="message"
             type="message"
@@ -80,6 +82,8 @@
 import isEmail from 'validator/es/lib/isEmail'
 import isAlpha from 'validator/es/lib/isAlpha'
 import { CONTACT_COPY } from '~~/constants/copy'
+
+const { data: contact } = await useFetch('/api/contact')
 
 const name = ref('')
 const nameError = ref(false)

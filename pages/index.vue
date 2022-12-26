@@ -1,45 +1,42 @@
 <template>
   <section class="home-section">
-    <div class="cta">
+    <div class="home-cta">
       <div>
         <h1>{{ HOME_COPY.frontendDeveloper }}</h1>
         <h2>{{ HOME_COPY.darrenPaul }}</h2>
       </div>
     </div>
 
-    <div class="projects">
+    <div class="home-projects">
       <h2>{{ HOME_COPY.latestProjects }}</h2>
-      <div class="project-list">
+
+      <div class="home-project-list">
         <a
           v-for="({ _id, slug, title, synopsis, thumbnailImage, publishedAt }, index) in projects"
           :key="_id"
-          class="project"
+          class="home-project"
           :href="`projects/${slug}`"
         >
-          <div class="project-index">
-            <h1 class="project-index-title">{{ String(index + 1).padStart(2, '0') }}</h1>
-          </div>
+          <div class="home-project-container">
+            <h1 class="home-project-index-title">{{ String(index + 1).padStart(2, '0') }}</h1>
 
-          <div class="project-card">
-            <div class="project-thumbnail-title">
+            <div class="home-project-card">
               <div class="project-title">
                 <h4>{{ title }}</h4>
                 <p class="light-text">{{ synopsis }}</p>
               </div>
 
-              <div class="project-thumbnail">
+              <div class="home-project-thumbnail">
                 <img :src="thumbnailImage" :alt="title" />
               </div>
             </div>
-          </div>
-          <div class="project-index">
             <p class="light-text">{{ dayjs(publishedAt).format(DATE_FORMAT) }}</p>
           </div>
         </a>
       </div>
     </div>
 
-    <div class="about">
+    <div class="home-about">
       <div class="card">
         <div class="about-content">
           <SanityContent :blocks="about.description" />
