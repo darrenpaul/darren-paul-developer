@@ -11,6 +11,7 @@ export default defineNuxtConfig({
         SANITY_DATASET: process.env.SANITY_DATASET,
         EMAIL_SERVER: process.env.EMAIL_SERVER,
         SEND_TO_EMAIL: process.env.SEND_TO_EMAIL,
+        GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID,
         sanity: {
             token: process.env.NUXT_SANITY_TOKEN
         }
