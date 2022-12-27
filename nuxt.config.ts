@@ -2,6 +2,8 @@ import { SITE_OWNER_COPY } from './constants/copy'
 import sitemapRoute from './helpers/sitemapRoute'
 
 export default defineNuxtConfig({
+    target: 'static',
+    generate: { fallback: true },
     ssr: true,
     css: ['~/assets/css/global.scss'],
     runtimeConfig: {
