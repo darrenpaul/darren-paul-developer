@@ -13,7 +13,15 @@ export const SITE_OWNER_COPY = {
     title: META_TITLE,
     htmlAttrs: {
       lang: 'en-GB',
-    }, link: [{ rel: 'icon', type: 'image/x-icon', href: `${CLOUDINARY}/${ICON}` }],
+    }, link: [
+      { rel: 'icon', type: 'image/x-icon', href: `${CLOUDINARY}/${ICON}` },
+      {
+
+        hid: 'canonical',
+        rel: 'canonical',
+        href: DOMAIN
+      }
+    ],
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
