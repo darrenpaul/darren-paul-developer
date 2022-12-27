@@ -16,7 +16,11 @@ export default defineNuxtConfig({
             token: process.env.NUXT_SANITY_TOKEN
         }
     },
-    modules: ['@nuxtjs/tailwindcss', '@nuxtjs/sanity', '@funken-studio/sitemap-nuxt-3',],
+    modules: [
+        '@nuxtjs/tailwindcss',
+        '@nuxtjs/sanity',
+        '@funken-studio/sitemap-nuxt-3'
+    ],
     sanity: {
         projectId: process.env.SANITY_PROJECT_ID
     },
