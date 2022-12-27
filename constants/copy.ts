@@ -5,7 +5,7 @@ const ICON = 'v1672139202/darren-paul-developer/darren-paul-logo_oimrkp.ico'
 const COVER_IMAGE = "v1672140864/darren-paul-developer/darren-paul-cover-min_ytvald.jpg"
 
 const META_TITLE = 'Darren Paul Front-end Developer'
-const META_DESCRIPTION = 'I’m Darren, a Software Engineer specialising in front-end development. I’ve chosen to focus on front-end development because it marries technology and creativity in a way that I find enriching. If you’re looking for an experienced Front End Developer with a passion for creating visually stunning websites and web applications that actually work, then I’m your guy.'
+const META_DESCRIPTION = 'Darren is an experienced Software Engineer specializing in creating visually stunning front-end websites and web applications. His expertise in combining technology and creativity provides an enriching experience for clients. Darren is the perfect choice for those looking for a reliable and innovative front-end developer.'
 const META_IMAGE = `${CLOUDINARY}/${COVER_IMAGE}`
 
 export const SITE_OWNER_COPY = {

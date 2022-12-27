@@ -18,7 +18,7 @@
           :href="`projects/${slug}`"
         >
           <div class="home-project-container">
-            <h1 class="home-project-index-title">{{ String(index + 1).padStart(2, '0') }}</h1>
+            <h2>{{ String(index + 1).padStart(2, '0') }}</h2>
 
             <div class="home-project-card">
               <div class="project-title">
@@ -27,7 +27,7 @@
               </div>
 
               <div class="home-project-thumbnail">
-                <img :src="thumbnailImage" :alt="title" />
+                <img :title="title" :src="thumbnailImage" :alt="title" />
               </div>
             </div>
             <p class="light-text">{{ dayjs(publishedAt).format(DATE_FORMAT) }}</p>

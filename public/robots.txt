@@ -1,0 +1,6 @@
+User-agent: Mediapartners-Google
+Disallow:
+User-agent: *
+Disallow: /admin
+Allow: /
+Sitemap: https://www.darrenpaul.dev/sitemap.xml
