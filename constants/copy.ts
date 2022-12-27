@@ -4,8 +4,8 @@ const CLOUDINARY = 'https://res.cloudinary.com/darren-paul-photography/image/upl
 const ICON = 'v1672139202/darren-paul-developer/darren-paul-logo_oimrkp.ico'
 const COVER_IMAGE = "v1672140864/darren-paul-developer/darren-paul-cover-min_ytvald.jpg"
 
-const META_TITLE = 'Darren Paul Front-end Developer'
-const META_DESCRIPTION = 'Darren is an experienced Software Engineer specializing in creating visually stunning front-end websites and web applications. His expertise in combining technology and creativity provides an enriching experience for clients. Darren is the perfect choice for those looking for a reliable and innovative front-end developer.'
+const META_TITLE = 'Darren Paul Software Engineer and Front-end Developer'
+const META_DESCRIPTION = 'Darren is an experienced Software Engineer specializing in stunning front-end websites and web applications. His expertise in combining technology and creativity provides an enriching experience for clients. Darren is the perfect choice for those looking for a reliable and innovative front-end developer.'
 const META_IMAGE = `${CLOUDINARY}/${COVER_IMAGE}`
 
 export const SITE_OWNER_COPY = {
