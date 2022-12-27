@@ -49,7 +49,7 @@ const pageUrl = () => {
   return `${SITE_OWNER_COPY.domain}${fullPath}`
 }
 
-definePageMeta({
+useHead({
   title: project.title,
   link: [
     // canonical
