@@ -27,5 +27,5 @@ export default eventHandler(async (event) => {
         return routes
     }
 
-    return [...(await fetchRoutes('blog')), ...(await fetchRoutes('gallery')), ...(await fetchRoutes('poetry'))]
+    return [...(await fetchRoutes('project'))]
 })

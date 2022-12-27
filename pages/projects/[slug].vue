@@ -18,7 +18,7 @@
     <div class="project-details">
       <div class="project-card">
         <div class="project-content">
-          <SanityContent :blocks="project.description" :serializers="serializers" />
+          <SanityContent :blocks="project.description" />
 
           <h3>{{ PROJECT_COPY.frameworks }}</h3>
           <div class="project-frameworks">
@@ -38,21 +38,150 @@
 
   <script setup lang="ts">
 import { FRAMEWORK_LOGOS } from '~~/constants/logos'
-import { PROJECT_COPY } from '~~/constants/copy'
+import { SITE_OWNER_COPY, PROJECT_COPY } from '~~/constants/copy'
 
-const serializers = {
-  // types: {
-  //   image: InlineImage
-  // },
-  // marks: {
-  //   link: SanityLink
-  // }
-}
-
-const { params } = useRoute()
+const { params, fullPath } = useRoute()
 const imageIndex = ref(0)
 
 const { data: project } = await useFetch('/api/project', { params: { slug: params.slug } })
+
+const pageUrl = () => {
+  return `${SITE_OWNER_COPY.domain}${fullPath}`
+}
+
+useHead({
+  title: project.title,
+  link: [
+    // canonical
+    {
+      hid: 'canonical',
+      rel: 'canonical',
+      href: pageUrl()
+    }
+  ],
+  meta: [
+    // Twitter
+    {
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary'
+    },
+    {
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: project.title
+    },
+    {
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content: project.metaDescription
+    },
+    {
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content: project.thumbnailImage
+    },
+    {
+      hid: 'twitter:url',
+      name: 'twitter:url',
+      content: pageUrl()
+    },
+    // Facebook
+    {
+      hid: 'og:sitename',
+      name: 'og:sitename',
+      content: SITE_OWNER_COPY.domain
+    },
+    {
+      hid: 'og:url',
+      name: 'og:url',
+      content: pageUrl()
+    },
+    {
+      hid: 'og:type',
+      name: 'og:type',
+      content: 'article'
+    },
+    {
+      hid: 'og:title',
+      name: 'og:title',
+      content: project.title
+    },
+    {
+      hid: 'og:description',
+      name: 'og:description',
+      content: project.metaDescription
+    },
+    {
+      hid: 'og:image',
+      name: 'og:image',
+      content: project.thumbnailImage
+    },
+    {
+      hid: 'og:image:width',
+      name: 'og:image:width',
+      property: '500'
+    },
+    {
+      hid: 'og:image:height',
+      name: 'og:image:height',
+      property: '500'
+    },
+    {
+      hid: 'og:latitude',
+      name: 'og:latitude',
+      property: 'og:latitude',
+      content: '40.7207559'
+    },
+    {
+      hid: 'og:longitude',
+      name: 'og:longitude',
+      property: 'og:longitude',
+      content: '-74.0007613'
+    },
+    // Google+
+    {
+      itemprop: 'name',
+      content: project.title
+    },
+    {
+      itemprop: 'description',
+      content: project.metaDescription
+    },
+    {
+      itemprop: 'image',
+      content: project.thumbnailImage
+    },
+    {
+      itemprop: 'url',
+      content: pageUrl()
+    },
+    {
+      itemprop: 'thumbnailUrl',
+      content: project.thumbnailImage
+    },
+    {
+      itemprop: 'author',
+      content: SITE_OWNER_COPY.darrenPaul
+    },
+    {
+      itemprop: 'datePublished',
+      content: project.publishedAt
+    },
+    {
+      itemprop: 'dateModified',
+      content: project.publishedAt
+    },
+    {
+      itemprop: 'headline',
+      content: project.title
+    },
+    {
+      itemprop: 'publisher',
+      content: SITE_OWNER_COPY.darrenPaul
+    }
+  ]
+})
 
 const onArrowLeftClick = () => {
   let nextIndex = imageIndex.value - 1

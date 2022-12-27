@@ -93,6 +93,7 @@ export const SITE_OWNER_COPY = {
     ]
   },
   domain: DOMAIN,
+  darrenPaul: "Darren Paul",
   cms: 'https://darrenpauldeveloper.sanity.studio/',
 }
 
