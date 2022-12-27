@@ -33,6 +33,8 @@
         </div>
       </div>
     </div>
+
+    {{ project.synopsis }}
   </section>
 </template>
 
@@ -50,7 +52,7 @@ const pageUrl = () => {
 }
 
 useHead({
-  title: project.title,
+  title: project.value.title,
   link: [
     // canonical
     {
@@ -69,17 +71,17 @@ useHead({
     {
       hid: 'twitter:title',
       name: 'twitter:title',
-      content: project.title
+      content: project.value.title
     },
     {
       hid: 'twitter:description',
       name: 'twitter:description',
-      content: project.metaDescription
+      content: project.value.metaDescription
     },
     {
       hid: 'twitter:image',
       name: 'twitter:image',
-      content: project.thumbnailImage
+      content: project.value.projectImages[0]
     },
     {
       hid: 'twitter:url',
@@ -105,17 +107,17 @@ useHead({
     {
       hid: 'og:title',
       name: 'og:title',
-      content: project.title
+      content: project.value.title
     },
     {
       hid: 'og:description',
       name: 'og:description',
-      content: project.metaDescription
+      content: project.value.metaDescription
     },
     {
       hid: 'og:image',
       name: 'og:image',
-      content: project.thumbnailImage
+      content: project.value.projectImages[0]
     },
     {
       hid: 'og:image:width',
@@ -142,15 +144,15 @@ useHead({
     // Google+
     {
       itemprop: 'name',
-      content: project.title
+      content: project.value.title
     },
     {
       itemprop: 'description',
-      content: project.metaDescription
+      content: project.value.metaDescription
     },
     {
       itemprop: 'image',
-      content: project.thumbnailImage
+      content: project.value.projectImages[0]
     },
     {
       itemprop: 'url',
@@ -158,7 +160,7 @@ useHead({
     },
     {
       itemprop: 'thumbnailUrl',
-      content: project.thumbnailImage
+      content: project.value.projectImages[0]
     },
     {
       itemprop: 'author',
@@ -166,15 +168,15 @@ useHead({
     },
     {
       itemprop: 'datePublished',
-      content: project.publishedAt
+      content: project.value.publishedAt
     },
     {
       itemprop: 'dateModified',
-      content: project.publishedAt
+      content: project.value.publishedAt
     },
     {
       itemprop: 'headline',
-      content: project.title
+      content: project.value.title
     },
     {
       itemprop: 'publisher',
