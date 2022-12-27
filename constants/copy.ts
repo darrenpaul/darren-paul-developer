@@ -1,17 +1,19 @@
 const DOMAIN = 'https://www.darrenpaul.dev'
-const CLOUDINARY = 'https://res.cloudinary.com/darren-paul-photography/image/upload/v1671261750/alicia-chamaille'
+const CLOUDINARY = 'https://res.cloudinary.com/darren-paul-photography/image/upload'
 
+const ICON = 'v1672139202/darren-paul-developer/darren-paul-logo_oimrkp.ico'
+const COVER_IMAGE = "v1672140864/darren-paul-developer/darren-paul-cover-min_ytvald.jpg"
 
 const META_TITLE = 'Darren Paul Front-end Developer'
-const META_DESCRIPTION = 'meta description'
-const META_IMAGE = ""
+const META_DESCRIPTION = 'I’m Darren, a Software Engineer specialising in front-end development. I’ve chosen to focus on front-end development because it marries technology and creativity in a way that I find enriching. If you’re looking for an experienced Front End Developer with a passion for creating visually stunning websites and web applications that actually work, then I’m your guy.'
+const META_IMAGE = `${CLOUDINARY}/${COVER_IMAGE}`
 
 export const SITE_OWNER_COPY = {
   meta: {
     title: META_TITLE,
     htmlAttrs: {
       lang: 'en-GB',
-    }, link: [{ rel: 'icon', type: 'image/x-icon', href: 'img/branding.ico' }],
+    }, link: [{ rel: 'icon', type: 'image/x-icon', href: `${CLOUDINARY}/${ICON}` }],
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -89,10 +91,6 @@ export const SITE_OWNER_COPY = {
     ]
   },
   domain: DOMAIN,
-  branding: `${CLOUDINARY}/alicia-chamaille-logo-grey_hfgofq.png`,
-  brandingIcon: `${CLOUDINARY}/alicia-chamaille-logo-grey_hfgofq.png`,
-  brandingTitle: 'Darren Paul',
-  brandingAlt: 'Darren Paul logo',
   cms: 'https://darrenpauldeveloper.sanity.studio/',
 }
 
@@ -137,11 +135,13 @@ export const CONTACT_COPY = {
   messagePlaceholder: "I would love to have a website designed by you, please get in-touch.",
   invalidInput: "Invalid",
   sendMessage: 'Send Message',
-  messageSent: "Message has been sent"
+  pleaseWait: "Please wait...",
+  messageSent: "Message has been sent",
+  formErrors: "Invalid form"
 }
 
 export const FOOTER_COPY = {
-  copyright: "2022 Copyright - Darren Paul",
+  copyright: "2023 Copyright - Darren Paul",
   github: {
     url: "https://github.com/darrenpaul/",
   },

@@ -72,16 +72,13 @@
           />
         </div>
 
-        <button class="contact-button" @click="handleSendMessage">{{ CONTACT_COPY.sendMessage }}</button>
+        <button :disabled="sendingMessage" class="contact-button" @click="handleSendMessage">
+          {{ sendingMessage ? CONTACT_COPY.pleaseWait : CONTACT_COPY.sendMessage }}
+        </button>
       </form>
     </div>
 
-    <Notification
-      :show="showNotification"
-      :message="notificationMessage"
-      :type="notificationType"
-      :on-timer-end="onNotifcationTimerEnd"
-    />
+    <NotificationToaster :notification="notification" />
   </section>
 </template>
 
@@ -92,10 +89,6 @@ import { CONTACT_COPY } from '~~/constants/copy'
 
 const { data: contact } = await useFetch('/api/contact')
 
-const showNotification = ref(false)
-const notificationMessage = ref(CONTACT_COPY.messageSent)
-const notificationType = ref('success')
-
 const name = ref('')
 const nameError = ref(false)
 const email = ref('')
@@ -104,6 +97,8 @@ const subject = ref('')
 const subjectError = ref(false)
 const message = ref('')
 const messageError = ref(false)
+const notification = ref({})
+const sendingMessage = ref(false)
 
 const validateName = () => {
   nameError.value = false
@@ -155,23 +150,19 @@ const onMessageChange = () => {
   validateMessage()
 }
 
-const onNotifcationTimerEnd = (value) => {
-  showNotification.value = value
-}
-
 const handleSendMessage = async (event) => {
   event.preventDefault()
-
   validateName()
   validateEmail()
   validateSubject()
   validateMessage()
-
   if (nameError.value || emailError.value || subjectError.value || messageError.value) {
+    notification.value = { title: '', message: CONTACT_COPY.formErrors, type: 'error' }
     return
   }
 
   try {
+    sendingMessage.value = true
     await $fetch('/api/message', {
       method: 'POST',
       params: {
@@ -191,13 +182,11 @@ const handleSendMessage = async (event) => {
     subjectError.value = false
     messageError.value = false
 
-    notificationMessage.value = CONTACT_COPY.messageSent
-    notificationType.value = 'success'
-    showNotification.value = true
+    notification.value = { title: '', message: CONTACT_COPY.messageSent, type: 'success' }
   } catch (error) {
-    notificationMessage.value = error.message
-    notificationType.value = 'error'
-    showNotification.value = true
+    notification.value = { title: '', message: error.message, type: 'error' }
+  } finally {
+    sendingMessage.value = false
   }
 }
 </script>
