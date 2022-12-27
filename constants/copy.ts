@@ -15,8 +15,8 @@ export const SITE_OWNER_COPY = {
       lang: 'en-GB',
     }, link: [
       { rel: 'icon', type: 'image/x-icon', href: `${CLOUDINARY}/${ICON}` },
+      // canonical
       {
-
         hid: 'canonical',
         rel: 'canonical',
         href: DOMAIN
@@ -29,12 +29,6 @@ export const SITE_OWNER_COPY = {
         hid: 'description',
         name: 'description',
         content: META_DESCRIPTION
-      },
-      // canonical
-      {
-        hid: 'canonical',
-        rel: 'canonical',
-        href: DOMAIN
       },
       // Schema.org markup for Google+
       {
