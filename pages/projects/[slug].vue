@@ -33,8 +33,6 @@
         </div>
       </div>
     </div>
-
-    {{ project.synopsis }}
   </section>
 </template>
 
@@ -52,7 +50,7 @@ const pageUrl = () => {
 }
 
 useHead({
-  title: project.value.title,
+  title: `${project.value.title} | ${PROJECT_COPY.meta.title}`,
   link: [
     // canonical
     {

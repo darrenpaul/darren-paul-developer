@@ -87,6 +87,8 @@ import isEmail from 'validator/es/lib/isEmail'
 import isAlpha from 'validator/es/lib/isAlpha'
 import { CONTACT_COPY } from '~~/constants/copy'
 
+useHead({ ...CONTACT_COPY.meta })
+
 const { data: contact } = await useFetch('/api/contact')
 
 const name = ref('')

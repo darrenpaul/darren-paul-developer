@@ -51,6 +51,8 @@ import dayjs from 'dayjs'
 import { DATE_FORMAT } from '~~/constants/date'
 import { HOME_COPY } from '~~/constants/copy'
 
+useHead({ ...HOME_COPY.meta })
+
 const { data: about } = await useFetch('/api/about')
 const { data: projects } = await useFetch('/api/projectsLatest')
 </script>

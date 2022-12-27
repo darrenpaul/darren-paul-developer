@@ -46,7 +46,7 @@ import { PROJECTS_COPY } from '~~/constants/copy'
 import { DATE_FORMAT } from '~~/constants/date'
 import { ROUTES } from '~~/constants/routes'
 
-useHead({ ...PROJECTS_COPY })
+useHead({ ...PROJECTS_COPY.meta })
 
 const { data: projects, pending } = await useFetch('/api/projects')
 
