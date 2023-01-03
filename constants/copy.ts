@@ -1,7 +1,7 @@
 const DOMAIN = 'https://www.darrenpaul.dev'
 const CLOUDINARY = 'https://res.cloudinary.com/darren-paul-photography/image/upload'
 
-const ICON = 'v1672139202/darren-paul-developer/darren-paul-logo_oimrkp.ico'
+const ICON = 'v1672769991/darren-paul-developer/darren-paul-logo_rcb1tw.ico'
 const COVER_IMAGE = "v1672140864/darren-paul-developer/darren-paul-cover-min_ytvald.jpg"
 
 const META_TITLE = 'Darren Paul Front-end Developer'
@@ -13,7 +13,8 @@ export const SITE_OWNER_COPY = {
     title: META_TITLE,
     htmlAttrs: {
       lang: 'en-GB',
-    }, link: [
+    },
+    link: [
       { rel: 'icon', type: 'image/x-icon', href: `${CLOUDINARY}/${ICON}` },
       // canonical
       {

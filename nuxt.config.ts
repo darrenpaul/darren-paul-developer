@@ -6,6 +6,9 @@ export default defineNuxtConfig({
     generate: { fallback: true },
     ssr: true,
     css: ['~/assets/css/global.scss'],
+    build: {
+        extractCSS: true
+    },
     runtimeConfig: {
         SANITY_PROJECT_ID: process.env.SANITY_PROJECT_ID,
         SANITY_DATASET: process.env.SANITY_DATASET,
