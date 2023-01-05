@@ -6,6 +6,8 @@ const COVER_IMAGE = "v1672140864/darren-paul-developer/darren-paul-cover-min_ytv
 
 const META_TITLE = 'Darren Paul Front-end Developer'
 const META_DESCRIPTION = 'For a reliable and innovative front-end developer, look no further than Darren. Darren is an experienced Software Engineer with a track record of creating stunning front-end websites and web applications. His blend of technology and creativity is sure to provide a unique and enriching experience for clients.'
+const META_PROJECTS_DESCRIPTION ='This website is dedicated to showcasing the web development projects that I have worked on. As a web developer, I have extensive experience in HTML, CSS, JavaScript, Nuxt, Vue, Next and React. My work has been used by clients in a variety of industries and applications. From building custom websites to creating many personal projects, I have the skills and experience to create any type of web development project. I strive to keep up with the latest web development trends and technologies to ensure that my clients receive the best possible results. No matter the project, I am committed to delivering quality work in a timely and efficient manner. If you need any help with your web development projects, please don`t hesitate to reach out. I`m always available to discuss your project and provide you with the best possible solutions.'
+const META_CONTACT_DESCRIPTION = 'If you’re looking for an experienced Front End Web Developer with a passion for creating visually stunning websites and web applications that actually work, then I’m your guy.'
 const META_IMAGE = `${CLOUDINARY}/${COVER_IMAGE}`
 
 export const SITE_OWNER_COPY = {
@@ -16,6 +18,20 @@ export const SITE_OWNER_COPY = {
     },
     link: [
       { rel: 'icon', type: 'image/x-icon', href: `${CLOUDINARY}/${ICON}` },
+    ],
+    noscript: [
+      { children: 'Javascript is required' }
+    ]
+  },
+  domain: DOMAIN,
+  darrenPaul: "Darren Paul",
+  cms: 'https://darrenpauldeveloper.sanity.studio/',
+}
+
+export const HOME_COPY = {
+  meta: {
+    title: `Home | ${META_TITLE}`,
+    link: [
       // canonical
       {
         hid: 'canonical',
@@ -34,7 +50,7 @@ export const SITE_OWNER_COPY = {
       // Schema.org markup for Google+
       {
         itemprop: 'name',
-        content: META_TITLE
+        content: `Home | ${META_TITLE}`
       },
       {
         itemprop: 'description',
@@ -46,7 +62,7 @@ export const SITE_OWNER_COPY = {
       }, // Twitter Card
       {
         name: 'twitter:title',
-        content: META_TITLE
+        content: `Home | ${META_TITLE}`
       },
       { name: 'twitter:card', content: 'summary' },
       {
@@ -56,7 +72,7 @@ export const SITE_OWNER_COPY = {
       {
         hid: 'og:title',
         property: 'og:title',
-        content: META_TITLE
+        content: `Home | ${META_TITLE}`
       },
       {
         hid: 'og:type',
@@ -88,19 +104,7 @@ export const SITE_OWNER_COPY = {
         property: 'og:description',
         content: META_DESCRIPTION
       }
-    ],
-    noscript: [
-      { children: 'Javascript is required' }
     ]
-  },
-  domain: DOMAIN,
-  darrenPaul: "Darren Paul",
-  cms: 'https://darrenpauldeveloper.sanity.studio/',
-}
-
-export const HOME_COPY = {
-  meta: {
-    title: `Home | ${META_TITLE}`
   },
   darrenPaul: "Darren Paul",
   frontendDeveloper: "Front-end Developer",
@@ -109,7 +113,81 @@ export const HOME_COPY = {
 
 export const PROJECTS_COPY = {
   meta: {
-    title: `Projects | ${META_TITLE}`
+    title: `Projects | ${META_TITLE}`,
+    link: [
+      // canonical
+      {
+        hid: 'canonical',
+        rel: 'canonical',
+        href: `${DOMAIN}/projects`
+      }
+    ],
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: META_PROJECTS_DESCRIPTION
+      },
+      // Schema.org markup for Google+
+      {
+        itemprop: 'name',
+        content: `Projects | ${META_TITLE}`
+      },
+      {
+        itemprop: 'description',
+        content: META_PROJECTS_DESCRIPTION
+      },
+      {
+        itemprop: 'image',
+        content: META_IMAGE
+      }, // Twitter Card
+      {
+        name: 'twitter:title',
+        content: `Projects | ${META_TITLE}`
+      },
+      { name: 'twitter:card', content: 'summary' },
+      {
+        name: 'twitter:image',
+        content: META_IMAGE
+      }, // Open Graph data
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: `Projects | ${META_TITLE}`
+      },
+      {
+        hid: 'og:type',
+        property: 'og:type',
+        content: 'website'
+      },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: `${DOMAIN}/projects`
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: META_IMAGE
+      },
+      {
+        hid: 'og:image:width',
+        name: 'og:image:width',
+        content: '1200px'
+      },
+      {
+        hid: 'og:image:height',
+        name: 'og:image:height',
+        content: '800px'
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: META_PROJECTS_DESCRIPTION
+      }
+    ]
   },
 }
 
@@ -123,11 +201,80 @@ export const PROJECT_COPY = {
 export const CONTACT_COPY = {
   meta: {
     title: `Contact | ${META_TITLE}`,
-    link: {
-      hid: 'canonical',
-      rel: 'canonical',
-      href: `${DOMAIN}/contact`
-    }
+    link: [
+      // canonical
+      {
+        hid: 'canonical',
+        rel: 'canonical',
+        href: `${DOMAIN}/Contact`
+      }
+    ],
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: META_CONTACT_DESCRIPTION
+      },
+      // Schema.org markup for Google+
+      {
+        itemprop: 'name',
+        content: `Contact | ${META_TITLE}`
+      },
+      {
+        itemprop: 'description',
+        content: META_CONTACT_DESCRIPTION
+      },
+      {
+        itemprop: 'image',
+        content: META_IMAGE
+      }, // Twitter Card
+      {
+        name: 'twitter:title',
+        content: `Contact | ${META_TITLE}`
+      },
+      { name: 'twitter:card', content: 'summary' },
+      {
+        name: 'twitter:image',
+        content: META_IMAGE
+      }, // Open Graph data
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: `Contact | ${META_TITLE}`
+      },
+      {
+        hid: 'og:type',
+        property: 'og:type',
+        content: 'website'
+      },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: `${DOMAIN}/Contact`
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: META_IMAGE
+      },
+      {
+        hid: 'og:image:width',
+        name: 'og:image:width',
+        content: '1200px'
+      },
+      {
+        hid: 'og:image:height',
+        name: 'og:image:height',
+        content: '800px'
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: META_CONTACT_DESCRIPTION
+      }
+    ]
   },
   title: "Wanna get in touch?",
   name: "Name",
