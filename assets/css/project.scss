@@ -1,11 +1,3 @@
-/* SIZE */
-/* MARGINS AND PADDING */
-/* LAYOUT */
-/* BORDERS */
-/* COLORS */
-/* TEXT */
-/* ANIMATION AND EFFECTS */
-
 .project-section {
   /* SIZE */
   @apply w-screen sm:w-full;
@@ -22,7 +14,6 @@
   .project-image {
     /* SIZE */
     @apply w-full h-fit;
-    // @apply w-full h-[calc(100vh-2rem)];
     /* MARGINS AND PADDING */
     @apply mx-auto;
     /* LAYOUT */
@@ -119,5 +110,22 @@
     /* COLORS */
     @apply bg-black/[0.3];
     /* TEXT */
+  }
+
+  .project-action-button {
+    transform: scale(1);
+    animation-name: pulse;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    /* SIZE */
+    /* MARGINS AND PADDING */
+    /* LAYOUT */
+    /* BORDERS */
+    /* COLORS */
+    @apply bg-transparent;
+    /* TEXT */
+    /* ANIMATION */
   }
 }
