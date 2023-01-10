@@ -44,7 +44,6 @@
 import dayjs from 'dayjs'
 import { PROJECTS_COPY } from '~~/constants/copy'
 import { DATE_FORMAT } from '~~/constants/date'
-import { ROUTES } from '~~/constants/routes'
 
 useHead({ ...PROJECTS_COPY.meta })
 

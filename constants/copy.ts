@@ -4,8 +4,8 @@ const CLOUDINARY = 'https://res.cloudinary.com/darren-paul-photography/image/upl
 const ICON = '/img/darren-paul-logo.ico'
 const COVER_IMAGE = "v1672140864/darren-paul-developer/darren-paul-cover-min_ytvald.jpg"
 
-const META_TITLE = 'Darren Paul Front-end Developer'
-const META_DESCRIPTION = 'For a reliable and innovative front-end developer, look no further than Darren. Darren is an experienced Software Engineer with a track record of creating stunning front-end websites and web applications. His blend of technology and creativity is sure to provide a unique and enriching experience for clients.'
+const META_TITLE = 'Darren Paul Web Developer'
+const META_DESCRIPTION = 'For a reliable and innovative Front End Web Developer, look no further than Darren. Darren is an experienced Software Engineer with a track record of creating stunning websites and web applications. His blend of technology and creativity is sure to provide a unique and enriching experience for clients.'
 const META_PROJECTS_DESCRIPTION ='This website is dedicated to showcasing the web development projects that I have worked on. As a web developer, I have extensive experience in HTML, CSS, JavaScript, Nuxt, Vue, Next and React. My work has been used by clients in a variety of industries and applications. From building custom websites to creating many personal projects, I have the skills and experience to create any type of web development project. I strive to keep up with the latest web development trends and technologies to ensure that my clients receive the best possible results. No matter the project, I am committed to delivering quality work in a timely and efficient manner. If you need any help with your web development projects, please don`t hesitate to reach out. I`m always available to discuss your project and provide you with the best possible solutions.'
 const META_CONTACT_DESCRIPTION = 'If you’re looking for an experienced Front End Web Developer with a passion for creating visually stunning websites and web applications that actually work, then I’m your guy.'
 const META_IMAGE = `${CLOUDINARY}/${COVER_IMAGE}`
@@ -107,7 +107,7 @@ export const HOME_COPY = {
     ]
   },
   darrenPaul: "Darren Paul",
-  frontendDeveloper: "Front-end Developer",
+  frontendDeveloper: "Front-End Developer",
   latestProjects: "Latest Projects"
 }
 
