@@ -7,7 +7,7 @@
 
 	export let data;
 
-	const metaTitle = '"Darren Paul: Front-End Web Developer in Vienna, Austria"';
+	const metaTitle = 'Darren Paul: Front-End Web Developer in Vienna, Austria';
 	const metaDescription =
 		'Hey, I’m Darren Paul a Software Engineer specializing in Front-End Web Development and based in the Vienna, Austria. I have a passion for creating beautiful, responsive and accessible websites and applications.';
 	const metaImage =
