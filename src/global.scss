@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+* {
+    /* SIZE */
+    /* MARGINS AND PADDING */
+    /* LAYOUT */
+    /* BORDERS */
+    /* COLORS */
+    /* TEXT */
+    @apply font-joseFinSans;
+    /* ANIMATION AND EFFECTS */
+}
+
+body {
+    @apply bg-[#00008B];
+}
+
+.page {
+    /* SIZE */
+    @apply w-screen;
+    height: 100dvh;
+    /* MARGINS AND PADDING */
+    /* LAYOUT */
+    @apply absolute top-0 flex flex-col items-center justify-center;
+    /* BORDERS */
+    /* COLORS */
+    /* TEXT */
+    /* ANIMATION AND EFFECTS */
+
+    .center {
+        /* SIZE */
+        @apply w-full;
+        /* MARGINS AND PADDING */
+        @apply p-2;
+        /* LAYOUT */
+        @apply flex flex-col items-center justify-center;
+        /* BORDERS */
+        /* COLORS */
+        /* TEXT */
+        /* ANIMATION AND EFFECTS */
+    }
+
+    .time {
+        /* SIZE */
+        /* MARGINS AND PADDING */
+        /* LAYOUT */
+        @apply grid grid-cols-2 items-end justify-center gap-4;
+        /* BORDERS */
+        /* COLORS */
+        /* TEXT */
+        /* ANIMATION AND EFFECTS */
+
+        h1 {
+            /* SIZE */
+            /* MARGINS AND PADDING */
+            @apply pr-4;
+            /* LAYOUT */
+            /* BORDERS */
+            @apply border-r-2;
+            /* COLORS */
+            @apply border-[#00008B];
+            /* TEXT */
+            @apply text-4xl md:text-6xl text-right;
+            /* ANIMATION AND EFFECTS */
+        }
+
+        h2 {
+            /* SIZE */
+            /* MARGINS AND PADDING */
+            /* LAYOUT */
+            /* BORDERS */
+            /* COLORS */
+            /* TEXT */
+            @apply text-2xl md:text-4xl text-left;
+            /* ANIMATION AND EFFECTS */
+        }
+    }
+}
