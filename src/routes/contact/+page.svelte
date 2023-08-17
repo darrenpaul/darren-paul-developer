@@ -154,7 +154,7 @@
 					/* ANIMATION AND EFFECTS */
 				}
 
-				.--input {
+				input {
 					/* SIZE */
 					/* MARGINS AND PADDING */
 					@apply p-2;
@@ -166,24 +166,14 @@
 					/* ANIMATION AND EFFECTS */
 				}
 
-				input {
-					@extend .--input;
-					/* SIZE */
-					/* MARGINS AND PADDING */
-					/* LAYOUT */
-					/* BORDERS */
-					/* COLORS */
-					/* TEXT */
-					/* ANIMATION AND EFFECTS */
-				}
-
 				textarea {
-					@extend .--input;
 					/* SIZE */
 					@apply h-32;
 					/* MARGINS AND PADDING */
+					@apply p-2;
 					/* LAYOUT */
 					/* BORDERS */
+					@apply border-2 border-black rounded;
 					/* COLORS */
 					/* TEXT */
 					@apply resize-none;
