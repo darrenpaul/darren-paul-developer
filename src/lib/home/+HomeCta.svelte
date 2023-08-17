@@ -57,9 +57,9 @@
 		/* SIZE */
 		min-height: calc(100dvh - 48px);
 		/* MARGINS AND PADDING */
-		@apply px-5 md:px-40;
+		@apply pt-12 md:pt-0 px-5 md:px-40;
 		/* LAYOUT */
-		@apply flex flex-col-reverse items-center justify-center gap-16 lg:grid grid-cols-2;
+		@apply flex flex-col-reverse items-center justify-center gap-8 md:gap-16 lg:grid grid-cols-2;
 		/* BORDERS */
 		/* COLORS */
 		/* TEXT */

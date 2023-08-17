@@ -8,10 +8,10 @@
 
 	const metaTitle = 'Darren Paul';
 	const metaDescription =
-		'Hey, I’m Darren Paul a Software Engineer specializing in Front-End Web Development and based in the Vienna, Austria. I have a passion for creating beautiful, responsive and accessible websites and applications.';
+		'Experienced web developer with a proven track record of delivering user-friendly and responsive websites and applications for clients of all sizes. Highly motivated and up-to-date on the latest trends and technologies.';
 	const metaImage =
 		'https://res.cloudinary.com/darren-paul-photography/image/upload/v1672140864/darren-paul-developer/darren-paul-cover-min_ytvald.jpg';
-	const domain = 'https://darrenpaul.dev/';
+	const domain = 'https://www.darrenpaul.dev';
 </script>
 
 <section class="contact">
