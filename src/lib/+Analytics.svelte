@@ -1,12 +1,9 @@
 <script lang="ts">
-	import { PUBLIC_GOOGLE_ANALYTICS_ID } from '$env/static/public';
 	import { page } from '$app/stores';
-
-	export let googleAnalyticsId = PUBLIC_GOOGLE_ANALYTICS_ID;
 
 	$: {
 		if (typeof gtag !== 'undefined') {
-			gtag('config', googleAnalyticsId, {
+			gtag('config', 'G-K6ZHFJZ5VH', {
 				page_title: document.title,
 				page_path: $page.url.pathname
 			});
@@ -15,7 +12,7 @@
 </script>
 
 <svelte:head>
-	<script async src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}>
+	<script async src={'https://www.googletagmanager.com/gtag/js?id=G-K6ZHFJZ5VH'}>
 	</script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
