@@ -1,7 +1,5 @@
-# https://www.robotstxt.org/robotstxt.html
+User-agent: Mediapartners-Google
+Disallow:
 User-agent: *
-
-Disallow: /*.js$
-Disallow: /*.json
-Disallow: /analytics.json
-Disallow: /current-visitors.json
+Allow: /
+Sitemap: https://www.darrenpaul.dev/sitemap.xml
