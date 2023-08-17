@@ -1,6 +1,5 @@
-export const siteName = 'DarrenPaul.dev'
+export const siteName = 'DarrenPaul.dev';
 
-export const hostURL = 'https://darrenpaul.dev'
+export const hostURL = 'https://www.darrenpaul.dev';
 
-export const author = 'Darren Paul'
-
+export const author = 'Darren Paul';
