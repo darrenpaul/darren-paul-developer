@@ -3,7 +3,10 @@
 
 	import Navigation from '$lib/+Navigation.svelte';
 	import Footer from '$lib/+Footer.svelte';
+	import Analytics from '$lib/+Analytics.svelte';
 </script>
+
+<Analytics />
 
 <Navigation />
 

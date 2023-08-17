@@ -19,3 +19,5 @@ export async function load() {
 		status: 404
 	};
 }
+
+export const prerender = true;

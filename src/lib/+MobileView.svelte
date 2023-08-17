@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import { urlForImage } from '$lib/sanityClient.js';
 
 	export let images;
@@ -17,7 +18,7 @@
 	<div class="--header" />
 
 	<div class="--content">
-		<img src={urlForImage(activeImage)} alt="image" />
+		<img src={urlForImage(activeImage)} alt={$page.params.slug.replaceAll('-', '')} />
 	</div>
 
 	<div class="--tabs">
