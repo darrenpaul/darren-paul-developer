@@ -1,10 +1,12 @@
 <script lang="ts">
+	import { PUBLIC_GOOGLE_ANALYTICS_ID } from '$env/static/public';
 	import { page } from '$app/stores';
-	import { PUBLIC_SANITY_PROJECT_ID } from '$env/static/public';
+
+	export let googleAnalyticsId = PUBLIC_GOOGLE_ANALYTICS_ID;
 
 	$: {
 		if (typeof gtag !== 'undefined') {
-			gtag('config', PUBLIC_SANITY_PROJECT_ID, {
+			gtag('config', googleAnalyticsId, {
 				page_title: document.title,
 				page_path: $page.url.pathname
 			});
@@ -13,7 +15,7 @@
 </script>
 
 <svelte:head>
-	<script async src={`https://www.googletagmanager.com/gtag/js?id=${PUBLIC_SANITY_PROJECT_ID}`}>
+	<script async src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}>
 	</script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
@@ -23,6 +25,6 @@
 		}
 
 		gtag('js', new Date());
-		gtag('config', PUBLIC_SANITY_PROJECT_ID);
+		gtag('config', 'G-K6ZHFJZ5VH');
 	</script>
 </svelte:head>
