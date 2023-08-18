@@ -11,7 +11,7 @@
 	{#if showCta}
 		<ProjectsCta />
 	{:else}
-		<h1 class="--heading">{title}</h1>
+		<h2 class="--heading">{title}</h2>
 	{/if}
 
 	<ul class="--list">
