@@ -43,6 +43,7 @@
 		.--details-wrapper {
 			/* SIZE */
 			/* MARGINS AND PADDING */
+			@apply mb-12;
 			/* LAYOUT */
 			@apply flex gap-16;
 			/* BORDERS */

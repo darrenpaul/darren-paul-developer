@@ -63,7 +63,7 @@
 
 			img {
 				/* SIZE */
-				@apply w-[384px] h-[288px];
+				@apply w-[384px] h-full sm:h-[288px];
 				/* MARGINS AND PADDING */
 				@apply pr-2 pb-2;
 				/* LAYOUT */
