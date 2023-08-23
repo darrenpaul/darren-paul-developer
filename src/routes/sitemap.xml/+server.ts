@@ -5,7 +5,7 @@ export async function GET() {
 		'*[_type == "project"]{"slug": slug.current} | order(dateTime(publishedAt) desc)'
 	);
 
-	const domain = 'https://darrenpaul.dev';
+	const domain = 'https://www.darrenpaul.dev';
 
 	const pages = [{ slug: 'about' }, { slug: 'projects' }, { slug: 'contact' }];
 
