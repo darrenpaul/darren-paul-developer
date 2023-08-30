@@ -46,7 +46,7 @@
 	<div class="--image-wrapper">
 		<img
 			class="--image"
-			src="https://res.cloudinary.com/darren-paul-photography/image/upload/v1692289433/darren-paul-developer/DSC_3891_fcboty.webp"
+			src="https://res.cloudinary.com/darren-paul-photography/image/upload/v1693379390/darren-paul-developer/darren-paul-cartoon_bs40kv.webp"
 			alt="Darren Paul"
 		/>
 	</div>
