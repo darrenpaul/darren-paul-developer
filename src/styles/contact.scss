@@ -1,144 +1,145 @@
 .contact {
-    /* SIZE */
-    min-height: calc(100dvh - 48px);
-    /* MARGINS AND PADDING */
-    @apply pt-24 md:pt-0;
-    /* LAYOUT */
-    @apply grid grid-cols-1 md:grid-cols-2 justify-center items-center;
-    /* BORDERS */
-    /* COLORS */
-    /* TEXT */
-    /* ANIMATION AND EFFECTS */
+	/* SIZE */
+	@apply max-w-screen-2xl;
+	min-height: calc(100dvh - 48px);
+	/* MARGINS AND PADDING */
+	@apply pt-24 md:pt-0 mx-auto;
+	/* LAYOUT */
+	@apply grid grid-cols-1 md:grid-cols-2 justify-center items-center;
+	/* BORDERS */
+	/* COLORS */
+	/* TEXT */
+	/* ANIMATION AND EFFECTS */
 
-    form {
-        /* SIZE */
-        /* MARGINS AND PADDING */
-        @apply px-5 md:px-16 mb-8 md:mb-0;
-        /* LAYOUT */
-        /* BORDERS */
-        /* COLORS */
-        /* TEXT */
-        /* ANIMATION AND EFFECTS */
+	form {
+		/* SIZE */
+		/* MARGINS AND PADDING */
+		@apply px-5 md:px-16 mb-8 md:mb-0;
+		/* LAYOUT */
+		/* BORDERS */
+		/* COLORS */
+		/* TEXT */
+		/* ANIMATION AND EFFECTS */
 
-        h1 {
-            /* SIZE */
-            @apply w-fit;
-            /* MARGINS AND PADDING */
-            @apply mx-auto mb-6 py-2 px-4;
-            /* LAYOUT */
-            /* BORDERS */
-            @apply border-b-4 border-r-4 border-black;
-            /* COLORS */
-            /* TEXT */
-            @apply text-5xl text-center;
-            /* ANIMATION AND EFFECTS */
-        }
-        .--input-group {
-            /* SIZE */
-            /* MARGINS AND PADDING */
-            @apply mb-3;
-            /* LAYOUT */
-            @apply grid;
-            /* BORDERS */
-            /* COLORS */
-            /* TEXT */
-            /* ANIMATION AND EFFECTS */
+		h1 {
+			/* SIZE */
+			@apply w-fit;
+			/* MARGINS AND PADDING */
+			@apply mx-auto mb-6 py-2 px-4;
+			/* LAYOUT */
+			/* BORDERS */
+			@apply border-b-4 border-r-4 border-black;
+			/* COLORS */
+			/* TEXT */
+			@apply text-5xl text-center;
+			/* ANIMATION AND EFFECTS */
+		}
+		.--input-group {
+			/* SIZE */
+			/* MARGINS AND PADDING */
+			@apply mb-3;
+			/* LAYOUT */
+			@apply grid;
+			/* BORDERS */
+			/* COLORS */
+			/* TEXT */
+			/* ANIMATION AND EFFECTS */
 
-            .--label-wrapper {
-                /* SIZE */
-                /* MARGINS AND PADDING */
-                /* LAYOUT */
-                @apply flex justify-between;
-                /* BORDERS */
-                /* COLORS */
-                /* TEXT */
-                /* ANIMATION AND EFFECTS */
+			.--label-wrapper {
+				/* SIZE */
+				/* MARGINS AND PADDING */
+				/* LAYOUT */
+				@apply flex justify-between;
+				/* BORDERS */
+				/* COLORS */
+				/* TEXT */
+				/* ANIMATION AND EFFECTS */
 
-                small {
-                    /* SIZE */
-                    /* MARGINS AND PADDING */
-                    /* LAYOUT */
-                    /* BORDERS */
-                    /* COLORS */
-                    @apply text-red-500;
-                    /* TEXT */
-                    @apply font-bold;
-                    /* ANIMATION AND EFFECTS */
-                }
-            }
+				small {
+					/* SIZE */
+					/* MARGINS AND PADDING */
+					/* LAYOUT */
+					/* BORDERS */
+					/* COLORS */
+					@apply text-red-500;
+					/* TEXT */
+					@apply font-bold;
+					/* ANIMATION AND EFFECTS */
+				}
+			}
 
-            .--input {
-                /* SIZE */
-                /* MARGINS AND PADDING */
-                @apply p-2;
-                /* LAYOUT */
-                /* BORDERS */
-                @apply border-2 border-black rounded;
-                /* COLORS */
-                /* TEXT */
-                /* ANIMATION AND EFFECTS */
-            }
+			.--input {
+				/* SIZE */
+				/* MARGINS AND PADDING */
+				@apply p-2;
+				/* LAYOUT */
+				/* BORDERS */
+				@apply border-2 border-black rounded;
+				/* COLORS */
+				/* TEXT */
+				/* ANIMATION AND EFFECTS */
+			}
 
-            .--input-error {
-                /* SIZE */
-                /* MARGINS AND PADDING */
-                /* LAYOUT */
-                /* BORDERS */
-                @apply border-2 border-red-500;
-                /* COLORS */
-                /* TEXT */
-                /* ANIMATION AND EFFECTS */
-                @apply animate-pulse;
-            }
+			.--input-error {
+				/* SIZE */
+				/* MARGINS AND PADDING */
+				/* LAYOUT */
+				/* BORDERS */
+				@apply border-2 border-red-500;
+				/* COLORS */
+				/* TEXT */
+				/* ANIMATION AND EFFECTS */
+				@apply animate-pulse;
+			}
 
-            input {
-                @extend .--input;
-                /* SIZE */
-                /* MARGINS AND PADDING */
-                /* LAYOUT */
-                /* BORDERS */
-                /* COLORS */
-                /* TEXT */
-                /* ANIMATION AND EFFECTS */
-            }
+			input {
+				@extend .--input;
+				/* SIZE */
+				/* MARGINS AND PADDING */
+				/* LAYOUT */
+				/* BORDERS */
+				/* COLORS */
+				/* TEXT */
+				/* ANIMATION AND EFFECTS */
+			}
 
-            textarea {
-                @extend .--input;
-                /* SIZE */
-                @apply h-32;
-                /* MARGINS AND PADDING */
-                /* LAYOUT */
-                /* BORDERS */
-                /* COLORS */
-                /* TEXT */
-                @apply resize-none;
-                /* ANIMATION AND EFFECTS */
-            }
-        }
+			textarea {
+				@extend .--input;
+				/* SIZE */
+				@apply h-32;
+				/* MARGINS AND PADDING */
+				/* LAYOUT */
+				/* BORDERS */
+				/* COLORS */
+				/* TEXT */
+				@apply resize-none;
+				/* ANIMATION AND EFFECTS */
+			}
+		}
 
-        button {
-            /* SIZE */
-            @apply w-full;
-            /* MARGINS AND PADDING */
-            @apply p-2;
-            /* LAYOUT */
-            /* BORDERS */
-            @apply border-2 border-black rounded;
-            /* COLORS */
-            @apply bg-black text-white;
-            /* TEXT */
-            /* ANIMATION AND EFFECTS */
-        }
-    }
+		button {
+			/* SIZE */
+			@apply w-full;
+			/* MARGINS AND PADDING */
+			@apply p-2;
+			/* LAYOUT */
+			/* BORDERS */
+			@apply border-2 border-black rounded;
+			/* COLORS */
+			@apply bg-black text-white;
+			/* TEXT */
+			/* ANIMATION AND EFFECTS */
+		}
+	}
 
-    .--text-wrapper {
-        /* SIZE */
-        /* MARGINS AND PADDING */
-        @apply px-5 md:px-16 mb-8 md:mb-0;
-        /* LAYOUT */
-        /* BORDERS */
-        /* COLORS */
-        /* TEXT */
-        /* ANIMATION AND EFFECTS */
-    }
+	.--text-wrapper {
+		/* SIZE */
+		/* MARGINS AND PADDING */
+		@apply px-5 md:px-16 mb-8 md:mb-0;
+		/* LAYOUT */
+		/* BORDERS */
+		/* COLORS */
+		/* TEXT */
+		/* ANIMATION AND EFFECTS */
+	}
 }

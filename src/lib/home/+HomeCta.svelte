@@ -54,10 +54,11 @@
 
 <style lang="scss">
 	.home-cta {
+		@apply max-w-screen-2xl;
 		/* SIZE */
 		min-height: calc(100dvh - 48px);
 		/* MARGINS AND PADDING */
-		@apply pt-12 md:pt-0 px-5 md:px-40;
+		@apply pt-12 md:pt-0 px-5 md:px-40 mx-auto;
 		/* LAYOUT */
 		@apply flex flex-col-reverse items-center justify-center gap-8 md:gap-16 lg:grid grid-cols-2;
 		/* BORDERS */

@@ -10,14 +10,14 @@
 	const metaDescription =
 		'Meet Darren Paul, a Software Engineer specializing in Front End Web Development with experience in VFX industry. Enjoys experimenting with latest beta and using Vue.js and React.js for professional projects. Also interested in photography, brewing, driving, investing, gaming, cooking and gardening.';
 	const metaImage =
-		'https://res.cloudinary.com/darren-paul-photography/image/upload/v1692289433/darren-paul-developer/DSC_3891_fcboty.webp';
+		'https://res.cloudinary.com/darren-paul-photography/image/upload/v1693379390/darren-paul-developer/darren-paul-cartoon_bs40kv.webp';
 	const domain = 'https://www.darrenpaul.dev';
 </script>
 
 <section class="about-me">
 	<div class="--image-wrapper">
 		<img
-			src="https://res.cloudinary.com/darren-paul-photography/image/upload/v1692289433/darren-paul-developer/DSC_3891_fcboty.webp"
+			src="https://res.cloudinary.com/darren-paul-photography/image/upload/v1693379390/darren-paul-developer/darren-paul-cartoon_bs40kv.webp"
 			alt="Darren Paul"
 		/>
 	</div>
@@ -66,9 +66,10 @@
 <style lang="scss">
 	.about-me {
 		/* SIZE */
+		@apply max-w-screen-2xl;
 		min-height: calc(100dvh - 48px);
 		/* MARGINS AND PADDING */
-		@apply px-10 pt-24 mb-8 md:pt-0 md:px-20 md:mb-0;
+		@apply px-10 pt-24 mb-8 md:pt-0 md:px-20 md:mb-0 mx-auto;
 		/* LAYOUT */
 		@apply flex flex-col lg:grid grid-cols-2 items-center;
 		/* BORDERS */

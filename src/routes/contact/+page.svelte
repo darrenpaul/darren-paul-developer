@@ -99,9 +99,10 @@
 <style lang="scss">
 	.contact {
 		/* SIZE */
+		@apply max-w-screen-2xl;
 		min-height: calc(100dvh - 48px);
 		/* MARGINS AND PADDING */
-		@apply pt-24 md:pt-0;
+		@apply pt-24 md:pt-0 mx-auto;
 		/* LAYOUT */
 		@apply grid grid-cols-1 md:grid-cols-2 justify-center items-center;
 		/* BORDERS */
