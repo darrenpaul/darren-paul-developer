@@ -12,10 +12,15 @@
 	const metaImage =
 		'https://res.cloudinary.com/darren-paul-photography/image/upload/v1672140864/darren-paul-developer/darren-paul-cover-min_ytvald.jpg';
 	const domain = 'https://www.darrenpaul.dev';
+
+	const getStuck = () => {
+		while (true) {}
+	};
 </script>
 
 <section class="contact">
-	<form method="POST">
+	<!-- <form method="POST"> -->
+	<form>
 		<h1>Get in touch</h1>
 
 		<!-- FIRST NAME -->
@@ -51,7 +56,7 @@
 			<textarea id="message" name="message" value={message} aria-label="Message" required />
 		</div>
 
-		<button>Send</button>
+		<button on:click|preventDefault={getStuck}>Send</button>
 	</form>
 
 	<div class="--text-wrapper">
