@@ -90,8 +90,10 @@ export default defineNuxtConfig({
 	$production: {
 		scripts: {
 			registry: {
-				plausibleAnalytics: {
-					domain: settings.domain!,
+				matomoAnalytics: {
+					cloudId: process.env.NUXT_PUBLIC_MATOMO_CLOUD_ID,
+					trackPageView: true,
+					siteId: process.env.NUXT_PUBLIC_MATOMO_SITE_ID,
 				},
 			},
 		},
