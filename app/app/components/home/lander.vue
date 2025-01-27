@@ -7,22 +7,20 @@
 		<div
 			class="flex flex-col justify-center items-center h-full max-w-[80ch] p-4"
 		>
-			<h1 class="text-neutral-950 tracking-tighter text-2xl">
+			<h1 class="text-neutral-950 tracking-tighter text-2xl leading-6">
 				<span> Hey there,</span>
 
 				<br>
 
 				<span
-					class="text-4xl md:text-6xl font-black uppercase bg-gradient-to-r from-sky-400 to-green-500 bg-clip-text text-transparent"
+					class="text-4xl md:text-6xl font-black uppercase bg-gradient-to-r from-neutral-800 to-red-500 bg-clip-text text-transparent"
 				>
 					I'm Darren Paul
 					<br>
 					a Software Developer
 				</span>
 				<br>
-				<span>
-					with a passion for frontend development and design.
-				</span>
+				<span> with a passion for frontend development and design. </span>
 			</h1>
 		</div>
 

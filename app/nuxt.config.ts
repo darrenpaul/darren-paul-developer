@@ -88,5 +88,4 @@ export default defineNuxtConfig({
 		blockNonSeoBots: true,
 		blockAiBots: true,
 	},
-
 })

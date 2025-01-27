@@ -12,8 +12,8 @@ export const experience = pgTable(
     startDate: timestamp('start_date', { precision: 6, withTimezone: true }).notNull(),
     endDate: timestamp('end_date', { precision: 6, withTimezone: true }),
     clientId: uuid('client_id')
-    .references(() => client.id, { onDelete: 'cascade' })
-    .notNull(),
+      .references(() => client.id, { onDelete: 'cascade' })
+      .notNull(),
     thumbnailUri: varchar('thumbnail_uri'),
     published: boolean('published').default(false).notNull(),
     updatedAt: timestamp('updated_at', { precision: 6, withTimezone: true }).notNull(),
