@@ -4,6 +4,7 @@ import { projectsRoute } from '~~/constants/routes'
 const props = defineProps({
 	label: { type: String, required: false },
 	projects: { type: Array as PropType<Project[]>, required: true },
+	showLink: { type: Boolean, required: false, default: true },
 })
 </script>
 
@@ -15,6 +16,7 @@ const props = defineProps({
 			</h2>
 
 			<NuxtLink
+				v-if="props.showLink"
 				:to="projectsRoute.path"
 				class="btn btn-outline btn-neutral shadow-hard"
 			>

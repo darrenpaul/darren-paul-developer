@@ -16,6 +16,7 @@ const [{ data: dataProjects }] = await Promise.all([
 		<ProjectsProjectList
 			label="All Projects"
 			:projects="dataProjects.projects"
+			:show-link="false"
 		/>
 	</div>
 </template>
