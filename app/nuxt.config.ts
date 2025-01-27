@@ -33,7 +33,6 @@ export default defineNuxtConfig({
 		'@nuxt/image',
 		'nuxt-tiptap-editor',
 		'nuxt-og-image',
-		'@nuxtjs/plausible',
 	],
 	typescript: {
 		strict: true,
