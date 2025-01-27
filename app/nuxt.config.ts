@@ -90,10 +90,8 @@ export default defineNuxtConfig({
 	$production: {
 		scripts: {
 			registry: {
-				matomoAnalytics: {
-					cloudId: process.env.NUXT_PUBLIC_MATOMO_CLOUD_ID,
-					trackPageView: true,
-					siteId: process.env.NUXT_PUBLIC_MATOMO_SITE_ID,
+				fathomAnalytics: {
+					site: process.env.NUXT_PUBLIC_FATHOM_SITE_ID!,
 				},
 			},
 		},
