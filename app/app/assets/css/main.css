@@ -1,0 +1,46 @@
+* {
+  font-family: "Afacad", sans-serif;
+  font-optical-sizing: auto;
+  font-display: swap;
+}
+
+.tiptap {
+  /* min-height: 256px; */
+  /* padding: 12px; */
+  ul {
+    li {
+      @apply list-disc;
+    }
+  }
+
+  ol {
+    li {
+      /* @apply list-decimal; */
+      @apply mb-16;
+    }
+  }
+
+  li {
+    @apply pl-3;
+    @apply ml-3;
+  }
+
+  blockquote {
+    @apply pl-3;
+    @apply ml-3;
+    @apply border-l-4 border-neutral-200;
+    @apply text-neutral-500;
+  }
+
+  h3 {
+    @apply text-2xl mb-3;
+  }
+
+  p {
+    @apply mb-1;
+  }
+
+  a {
+    @apply underline;
+  }
+}

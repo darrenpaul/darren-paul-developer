@@ -1,0 +1,1 @@
+ALTER TABLE "experience" ADD COLUMN "employment_type" varchar DEFAULT 'PERMANENT' NOT NULL;

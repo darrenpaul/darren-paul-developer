@@ -1,7 +1,0 @@
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^darrenpaul.dev [NC]
-RewriteRule ^(.*)$ https://www.darrenpaul.dev/$1 [L,R=301,NC]
-
-RewriteBase /
-RewriteCond %{HTTP_HOST} !=""
-RewriteRule ^index.php(/.*)?$ http://%{HTTP_HOST}$1 [R=301]
