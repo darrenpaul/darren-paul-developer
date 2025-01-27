@@ -88,4 +88,13 @@ export default defineNuxtConfig({
 		blockNonSeoBots: true,
 		blockAiBots: true,
 	},
+	$production: {
+		scripts: {
+			registry: {
+				plausibleAnalytics: {
+					domain: settings.domain!,
+				},
+			},
+		},
+	},
 })

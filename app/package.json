@@ -20,7 +20,6 @@
     "@nuxt/image": "1.8.1",
     "@nuxt/scripts": "0.9.5",
     "@nuxtjs/i18n": "9.0.0-rc.2",
-    "@nuxtjs/plausible": "1.2.0",
     "@nuxtjs/seo": "2.0.2",
     "@nuxtjs/supabase": "1.4.5",
     "@nuxtjs/tailwindcss": "6.12.2",

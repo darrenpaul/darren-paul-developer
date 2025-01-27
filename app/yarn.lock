@@ -352,11 +352,6 @@
     "@babel/helper-string-parser" "^7.25.9"
     "@babel/helper-validator-identifier" "^7.25.9"
 
-"@barbapapazes/plausible-tracker@^0.5.6":
-  version "0.5.6"
-  resolved "https://registry.yarnpkg.com/@barbapapazes/plausible-tracker/-/plausible-tracker-0.5.6.tgz#36c2cf3354326282b9a3315538dbec2744acb997"
-  integrity sha512-GRZxn3ZngYQ1+QbdP8d66D/lQg+T2oEevG8kBGfNwVbt9VZB67sgMx/gkRo/Ww2lH7QelgjUNzvOeG+DsJX2HQ==
-
 "@capsizecss/metrics@^2.1.1":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@capsizecss/metrics/-/metrics-2.2.0.tgz#f8cad1e2911e2e1bb16c2cb69da41be8f5c9b31b"
@@ -1714,16 +1709,6 @@
     unplugin-vue-router "^0.10.8"
     vue-i18n "^10.0.3"
     vue-router "^4.4.5"
-
-"@nuxtjs/plausible@1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/plausible/-/plausible-1.2.0.tgz#0b7fc89308619ea1b520d5f40ed426ff2303153e"
-  integrity sha512-pjfps32fFN77BhjqHmq2Jx4XCNso9TcYnB+S4IR2qH/c26WDfYB5mQxN5pOEiWRlMkiKq+Y45mBBFtSOVKClCA==
-  dependencies:
-    "@barbapapazes/plausible-tracker" "^0.5.6"
-    "@nuxt/kit" "^3.14.1592"
-    defu "^6.1.4"
-    ufo "^1.5.4"
 
 "@nuxtjs/robots@^5.0.0":
   version "5.1.0"
