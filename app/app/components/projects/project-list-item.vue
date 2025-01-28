@@ -5,6 +5,8 @@ import IconLink from '~/assets/icons/link.svg'
 const props = defineProps({
 	project: { type: Object as PropType<Project>, required: true },
 })
+
+const { trackEvent } = useAnalytics()
 </script>
 
 <template>
@@ -36,6 +38,7 @@ const props = defineProps({
 						target="_blank"
 						class="btn btn-circle btn-neutral p-2 flex items-center justify-center rounded-full shadow-hard border-2 border-neutral-950"
 						:to="props.project.liveUri"
+						@click="() => trackEvent(`${props.project.slug}_live_uri_clicked`)"
 					>
 						<IconLink
 							filled

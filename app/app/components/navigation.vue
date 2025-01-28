@@ -12,6 +12,8 @@ const menuOpen = ref(false)
 router.beforeEach(async () => {
 	menuOpen.value = false
 })
+
+const { trackEvent } = useAnalytics()
 </script>
 
 <template>
@@ -44,6 +46,7 @@ router.beforeEach(async () => {
 					to="https://github.com/darrenpaul/"
 					class="text-lg"
 					active-class="font-bold underline"
+					@click="() => trackEvent('github_clicked')"
 				>
 					<IconGithub filled :font-controlled="false" class="w-8 h-8" />
 				</NuxtLink>
@@ -52,6 +55,7 @@ router.beforeEach(async () => {
 					to="https://www.linkedin.com/in/darren-paul-16765ab2/"
 					class="text-lg"
 					active-class="font-bold underline"
+					@click="() => trackEvent('linkedin_clicked')"
 				>
 					<IconLinkedin filled :font-controlled="false" class="w-8 h-8" />
 				</NuxtLink>
@@ -112,11 +116,17 @@ router.beforeEach(async () => {
 					</div>
 
 					<div class="flex gap-4 items-center justify-center">
-						<NuxtLink to="/" class="text-lg" active-class="font-bold underline">
+						<NuxtLink
+							to="/" class="text-lg" active-class="font-bold underline"
+							@click="() => trackEvent('github_clicked')"
+						>
 							<IconGithub filled :font-controlled="false" class="w-8 h-8" />
 						</NuxtLink>
 
-						<NuxtLink to="/" class="text-lg" active-class="font-bold underline">
+						<NuxtLink
+							to="/" class="text-lg" active-class="font-bold underline"
+							@click="() => trackEvent('linkedin_clicked')"
+						>
 							<IconLinkedin filled :font-controlled="false" class="w-8 h-8" />
 						</NuxtLink>
 					</div>
