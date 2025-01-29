@@ -6,6 +6,7 @@ export interface Project {
 	slug: string
 	thumbnailUri: string
 	description: string
+	content: string
 	liveUri: string
 	tools: Tool[]
 }

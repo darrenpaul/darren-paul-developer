@@ -2,6 +2,10 @@
 
 <template>
 	<div>
+		Experience
 		<AdminExperienceForm />
+
+		Project
+		<AdminProjectForm />
 	</div>
 </template>

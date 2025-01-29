@@ -1,11 +1,11 @@
 <script setup lang="ts">
 const content = ref<string>('')
 
-async function handleExperienceSave() {
-	await $fetch('/api/v1/admin/experience', {
+async function handleSave() {
+	await $fetch('/api/v1/admin/project', {
 		method: 'PATCH',
 		body: {
-			id: '88c47c6e-b8c3-4fb9-92cf-0e533efc31c5',
+			id: '4cd68677-6e51-4494-a698-bc55450f1e0d',
 			content: content.value,
 		},
 	})
@@ -23,11 +23,7 @@ async function handleExperienceSave() {
 			/>
 		</ClientOnly>
 
-		<button
-			type="button"
-			class="btn btn-neutral btn-block"
-			@click="handleExperienceSave"
-		>
+		<button type="button" class="btn btn-neutral btn-block" @click="handleSave">
 			Save Blog
 		</button>
 	</div>

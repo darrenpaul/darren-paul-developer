@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import type { Project } from '~~/types/project'
+import { projectsRoute } from '~~/constants/routes'
+import { joinUrlDirectories } from '~~/lib/url-directory-join'
 import IconLink from '~/assets/icons/link.svg'
+import IconMagnifier from '~/assets/icons/magnifier.svg'
 
 const props = defineProps({
 	project: { type: Object as PropType<Project>, required: true },
@@ -28,9 +31,16 @@ const { trackEvent } = useAnalytics()
 				</p>
 
 				<div class="flex gap-4">
-					<!-- <NuxtLink class="btn btn-circle btn-neutral p-2 flex items-center justify-center rounded-full shadow-hard border-2 border-neutral-950" :to="joinUrlDirectories([projectsRoute.path, props.project.slug])">
-						<IconMagnifier filled :font-controlled="false" class="w-6 h-6 fill-white" />
-					</NuxtLink> -->
+					<NuxtLink
+						class="btn btn-circle btn-neutral p-2 flex items-center justify-center rounded-full shadow-hard border-2 border-neutral-950"
+						:to="joinUrlDirectories([projectsRoute.path, props.project.slug])"
+					>
+						<IconMagnifier
+							filled
+							:font-controlled="false"
+							class="w-6 h-6 fill-white"
+						/>
+					</NuxtLink>
 
 					<NuxtLink
 						v-if="props.project.liveUri"
