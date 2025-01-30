@@ -87,13 +87,18 @@ export default defineNuxtConfig({
 		blockNonSeoBots: true,
 		blockAiBots: true,
 	},
-	$production: {
-		scripts: {
-			registry: {
-				fathomAnalytics: {
-					site: process.env.NUXT_PUBLIC_FATHOM_SITE_ID!,
-				},
-			},
-		},
+	umami: {
+		id: process.env.NUXT_PUBLIC_UMAMI_KEY,
+		host: process.env.NUXT_PUBLIC_UMAMI_HOST,
+		autoTrack: true,
+		// proxy: "direct",
+		// enabled: process.env.NODE_ENV === 'production',
+		enabled: true,
+		// useDirective: true,
+		// ignoreLocalhost: true,
+		// excludeQueryParams: false,
+		// domains: [settings.domain],
+		// customEndpoint: '/my-custom-endpoint',
+		logErrors: true,
 	},
 })
