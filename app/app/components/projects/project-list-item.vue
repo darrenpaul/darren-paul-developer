@@ -34,6 +34,7 @@ const { trackEvent } = useAnalytics()
 					<NuxtLink
 						class="btn btn-circle btn-neutral p-2 flex items-center justify-center rounded-full shadow-hard border-2 border-neutral-950"
 						:to="joinUrlDirectories([projectsRoute.path, props.project.slug])"
+						@click="() => trackEvent(`view-${props.project.slug}-page`)"
 					>
 						<IconMagnifier
 							filled
@@ -48,7 +49,7 @@ const { trackEvent } = useAnalytics()
 						target="_blank"
 						class="btn btn-circle btn-neutral p-2 flex items-center justify-center rounded-full shadow-hard border-2 border-neutral-950"
 						:to="props.project.liveUri"
-						@click="() => trackEvent(`${props.project.slug}_live_uri_clicked`)"
+						@click="() => trackEvent(`view-${props.project.slug}-live`)"
 					>
 						<IconLink
 							filled

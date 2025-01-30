@@ -47,7 +47,7 @@ const { trackEvent } = useAnalytics()
 					class="text-lg"
 					active-class="font-bold underline"
 					target="_blank"
-					@click="() => trackEvent('github_clicked')"
+					@click="() => trackEvent('view-github')"
 				>
 					<IconGithub filled :font-controlled="false" class="w-8 h-8" />
 				</NuxtLink>
@@ -57,7 +57,7 @@ const { trackEvent } = useAnalytics()
 					class="text-lg"
 					active-class="font-bold underline"
 					target="_blank"
-					@click="() => trackEvent('linkedin_clicked')"
+					@click="() => trackEvent('view-linkedin')"
 				>
 					<IconLinkedin filled :font-controlled="false" class="w-8 h-8" />
 				</NuxtLink>
@@ -123,7 +123,7 @@ const { trackEvent } = useAnalytics()
 							class="text-lg"
 							active-class="font-bold underline"
 							target="_blank"
-							@click="() => trackEvent('github_clicked')"
+							@click="() => trackEvent('view-github')"
 						>
 							<IconGithub filled :font-controlled="false" class="w-8 h-8" />
 						</NuxtLink>
@@ -133,7 +133,7 @@ const { trackEvent } = useAnalytics()
 							class="text-lg"
 							active-class="font-bold underline"
 							target="_blank"
-							@click="() => trackEvent('linkedin_clicked')"
+							@click="() => trackEvent('view-linkedin')"
 						>
 							<IconLinkedin filled :font-controlled="false" class="w-8 h-8" />
 						</NuxtLink>
