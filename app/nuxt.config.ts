@@ -33,6 +33,7 @@ export default defineNuxtConfig({
 		'@nuxt/image',
 		'nuxt-tiptap-editor',
 		'nuxt-og-image',
+		'nuxt-umami',
 	],
 	typescript: {
 		strict: true,
