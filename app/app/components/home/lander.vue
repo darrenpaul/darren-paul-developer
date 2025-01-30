@@ -2,7 +2,7 @@
 
 <template>
 	<div
-		class="flex flex-col-reverse md:flex-row justify-center items-center gap-16 pb-4 py-32"
+		class="flex flex-col-reverse md:flex-row justify-center items-center gap-8 mt-16 md:mt-0 py-4 mb:py-16"
 	>
 		<div
 			class="flex flex-col justify-center items-center h-full max-w-[80ch] p-4"
@@ -25,12 +25,12 @@
 		</div>
 
 		<div
-			class="bg-white rounded-full border-2 border-neutral-950 overflow-hidden shadow-hard w-full max-w-72 md:max:w-96 rotate-12"
+			class="bg-white rounded-full border-2 border-neutral-950 overflow-hidden shadow-hard"
 		>
 			<NuxtImg
 				src="https://res.cloudinary.com/darren-paul-photography/image/upload/v1693379390/darren-paul-developer/darren-paul-cartoon_bs40kv.webp"
 				alt="Darren Paul Dev Landing Image"
-				class="w-full h-72 md:h-96 object-cover"
+				class="h-72 md:h-96 object-cover aspect-square"
 			/>
 		</div>
 	</div>

@@ -19,11 +19,11 @@ const [{ data: dataProjects }, { data: dataExperiences }] = await Promise.all([
 
 <template>
 	<div
-		class="min-h-screen md:pt-28 max-w-screen-xl mx-auto flex flex-col gap-16"
+		class="min-h-screen md:pt-28 max-w-screen-xl mx-auto flex flex-col gap-8"
 	>
 		<HomeLander />
 
-		<ProjectsProjectList
+		<ProjectsFavoriteProjectList
 			label="Favorite Projects"
 			:projects="dataProjects.projects"
 		/>

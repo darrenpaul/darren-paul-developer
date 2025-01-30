@@ -5,8 +5,8 @@
 }
 
 .tiptap {
-  /* min-height: 256px; */
-  /* padding: 12px; */
+  min-height: 256px;
+  padding: 12px;
   ul {
     li {
       @apply list-disc;
@@ -15,14 +15,13 @@
 
   ol {
     li {
-      /* @apply list-decimal; */
-      @apply mb-16;
+      @apply list-decimal;
     }
   }
 
   li {
     @apply pl-3;
-    @apply ml-3;
+    @apply ml-6;
   }
 
   blockquote {
@@ -32,12 +31,20 @@
     @apply text-neutral-500;
   }
 
-  h3 {
+  h1 {
+    @apply text-3xl mb-3;
+  }
+
+  h2 {
     @apply text-2xl mb-3;
   }
 
+  h3 {
+    @apply text-xl mb-2;
+  }
+
   p {
-    @apply mb-1;
+    @apply mb-2;
   }
 
   a {

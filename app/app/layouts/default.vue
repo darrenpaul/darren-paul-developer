@@ -8,7 +8,7 @@ const { notification } = useToaster()
 </script>
 
 <template>
-	<div class="bg-gradient-to-b from-sky-50 to-sky-100">
+	<div class="bg-gradient-to-b from-sky-50 to-sky-100 px-4">
 		<Toaster :notification="notification" />
 
 		<Navigation />
