@@ -92,7 +92,7 @@ export default defineNuxtConfig({
 		host: process.env.NUXT_PUBLIC_UMAMI_HOST,
 		autoTrack: true,
 		// proxy: "direct",
-		enabled: process.env.NODE_ENV === 'production',
+		enabled: true,
 		// useDirective: true,
 		// ignoreLocalhost: true,
 		// excludeQueryParams: false,
