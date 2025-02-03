@@ -119,7 +119,7 @@ const { trackEvent } = useAnalytics()
 
 					<div class="flex gap-4 items-center justify-center">
 						<NuxtLink
-							to="/"
+							to="https://github.com/darrenpaul/"
 							class="text-lg"
 							active-class="font-bold underline"
 							target="_blank"
@@ -129,7 +129,7 @@ const { trackEvent } = useAnalytics()
 						</NuxtLink>
 
 						<NuxtLink
-							to="/"
+							to="https://www.linkedin.com/in/darren-paul-16765ab2/"
 							class="text-lg"
 							active-class="font-bold underline"
 							target="_blank"
