@@ -28,19 +28,13 @@ const props = defineProps({
 				{{ props.experience.employmentType }}
 			</p>
 
-			<div tabindex="0" class="collapse collapse-arrow mb-0">
-				<div class="collapse-title px-0 py-0">
-					<p class="text-2xl font-bold uppercase max-w-[80ch]">
-						{{ props.experience.role }}
-					</p>
-				</div>
-
-				<div class="text-neutral-950 w-full collapse-content p-0">
+			<LazyCollapse :title="props.experience.role">
+				<div>
 					<ToolList class="mb-6" :tools="props.experience.tools" />
 
 					<div class="tiptap max-w-[80ch]" v-html="props.experience.content" />
 				</div>
-			</div>
+			</LazyCollapse>
 		</div>
 
 		<div class="hidden md:flex gap-4 w-full">
@@ -68,19 +62,13 @@ const props = defineProps({
 				<div v-if="!props.isLastItem" class="h-full w-0.5 bg-sky-600" />
 			</div>
 
-			<div tabindex="0" class="collapse collapse-arrow">
-				<div class="collapse-title p-0">
-					<p class="text-2xl font-bold uppercase max-w-[80ch]">
-						{{ props.experience.role }}
-					</p>
-				</div>
-
-				<div class="text-neutral-950 w-full collapse-content">
+			<LazyCollapse :title="props.experience.role">
+				<div>
 					<ToolList class="mb-6" :tools="props.experience.tools" />
 
 					<div class="tiptap max-w-[80ch]" v-html="props.experience.content" />
 				</div>
-			</div>
+			</LazyCollapse>
 		</div>
 	</div>
 </template>
