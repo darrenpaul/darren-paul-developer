@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import type { Tool } from '../types/tool';
 
 interface Props {
@@ -11,7 +12,15 @@ const { tools, class: className = '' } = Astro.props;
 <div class:list={["grid grid-cols-3 md:flex flex-wrap items-center gap-4 w-fit", className]}>
   {tools.map((tool) => (
     <div class="flex flex-col gap-1 text-center items-center">
-      <img class="h-8 object-contain mb-1" src={tool.iconUri} alt={tool.title} />
+      <Image
+        src={tool.iconUri}
+        alt={tool.title}
+        inferSize
+        widths={[32, 64]}
+        sizes="32px"
+        format="avif"
+        class="h-8 object-contain mb-1"
+      />
       <small class="badge badge-ghost">{tool.title}</small>
     </div>
   ))}

@@ -30,10 +30,22 @@ const currentPath = Astro.url.pathname;
     </div>
 
     <div class="hidden md:flex gap-2 place-content-end">
-      <a href="https://github.com/darrenpaul/" class="text-lg" target="_blank" rel="noreferrer noopener">
+      <a
+        href="https://github.com/darrenpaul/"
+        class="text-lg"
+        target="_blank"
+        rel="noreferrer noopener"
+        aria-label="Darren Paul on GitHub"
+      >
         <Github class="w-8 h-8" />
       </a>
-      <a href="https://www.linkedin.com/in/darren-paul-16765ab2/" class="text-lg" target="_blank" rel="noreferrer noopener">
+      <a
+        href="https://www.linkedin.com/in/darren-paul-16765ab2/"
+        class="text-lg"
+        target="_blank"
+        rel="noreferrer noopener"
+        aria-label="Darren Paul on LinkedIn"
+      >
         <Linkedin class="w-8 h-8" />
       </a>
     </div>
@@ -44,7 +56,12 @@ const currentPath = Astro.url.pathname;
   </div>
 
   <div class="drawer">
-    <input id="navigation-drawer" type="checkbox" class="drawer-toggle" />
+    <input
+      id="navigation-drawer"
+      type="checkbox"
+      class="drawer-toggle"
+      aria-label="Navigation drawer"
+    />
     <div class="drawer-side z-drawer">
       <label for="navigation-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
       <div class="flex flex-col justify-between bg-white min-h-full w-80 p-4">
@@ -68,10 +85,22 @@ const currentPath = Astro.url.pathname;
         </div>
 
         <div class="flex gap-4 items-center justify-center">
-          <a href="https://github.com/darrenpaul/" class="text-lg" target="_blank" rel="noreferrer noopener">
+          <a
+            href="https://github.com/darrenpaul/"
+            class="text-lg"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Darren Paul on GitHub"
+          >
             <Github class="w-8 h-8" />
           </a>
-          <a href="https://www.linkedin.com/in/darren-paul-16765ab2/" class="text-lg" target="_blank" rel="noreferrer noopener">
+          <a
+            href="https://www.linkedin.com/in/darren-paul-16765ab2/"
+            class="text-lg"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Darren Paul on LinkedIn"
+          >
             <Linkedin class="w-8 h-8" />
           </a>
         </div>

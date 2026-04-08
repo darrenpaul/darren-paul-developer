@@ -16,6 +16,8 @@ export default defineConfig({
   image: {
     remotePatterns: [
       { protocol: 'https', hostname: 'res.cloudinary.com' },
+      { protocol: 'https', hostname: '**.supabase.co' },
+      { protocol: 'https', hostname: 'cdn.sanity.io' },
     ],
   },
   vite: {
