@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /admin
+Disallow: /confirm
+Disallow: /account
+Disallow: /stripe/success
+Disallow: /stripe/canceled
+
+Sitemap: https://darrenpaul.dev/sitemap-index.xml

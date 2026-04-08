@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Lander from '../components/home/Lander.astro';
+import FavoriteProjectList from '../components/projects/FavoriteProjectList.astro';
+import WorkExperienceList from '../components/work-experience/WorkExperienceList.astro';
+import { getProjects } from '../lib/queries/projects';
+import { getExperiences } from '../lib/queries/experiences';
+
+const projects = await getProjects({ favorite: true, limit: 3 });
+const experiences = await getExperiences();
+---
+<BaseLayout title="Darren Paul — Software Developer">
+  <div class="min-h-screen md:pt-28 max-w-screen-xl mx-auto flex flex-col gap-8">
+    <Lander />
+    <FavoriteProjectList label="Favorite Projects" projects={projects} />
+    <WorkExperienceList experiences={experiences} />
+  </div>
+</BaseLayout>

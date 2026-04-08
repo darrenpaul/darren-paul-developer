@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectList from '../../components/projects/ProjectList.astro';
+import { getProjects } from '../../lib/queries/projects';
+
+const projects = await getProjects();
+---
+<BaseLayout title="Projects — Darren Paul">
+  <div class="min-h-screen pt-28 max-w-screen-xl mx-auto flex flex-col gap-16">
+    <ProjectList label="All Projects" projects={projects} showLink={false} />
+  </div>
+</BaseLayout>

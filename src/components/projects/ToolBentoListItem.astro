@@ -1,0 +1,12 @@
+---
+import type { Tool } from '../../types/tool';
+
+interface Props {
+  tool: Tool;
+}
+
+const { tool } = Astro.props;
+---
+<div class="bg-white rounded-lg shadow-hard border-2 border-neutral-950 w-full aspect-square md:h-fit flex items-center justify-center">
+  <img src={tool.iconUri} alt={`${tool.title} Icon`} class="w-10" />
+</div>

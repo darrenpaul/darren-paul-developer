@@ -1,0 +1,13 @@
+---
+import type { Tool } from '../../types/tool';
+import ToolBentoListItem from './ToolBentoListItem.astro';
+
+interface Props {
+  tools: Tool[];
+}
+
+const { tools } = Astro.props;
+---
+<div class="grid grid-cols-5 gap-2 h-fit">
+  {tools.map((tool) => <ToolBentoListItem tool={tool} />)}
+</div>

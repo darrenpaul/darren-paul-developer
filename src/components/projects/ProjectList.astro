@@ -1,0 +1,30 @@
+---
+import type { Project } from '../../types/project';
+import { projectsRoute } from '../../constants/routes';
+import ProjectListItem from './ProjectListItem.astro';
+
+interface Props {
+  label?: string;
+  projects: Project[];
+  showLink?: boolean;
+}
+
+const { label, projects, showLink = true } = Astro.props;
+---
+<div class="px-2 md:px-0">
+  {label && (
+    <div class="flex justify-between items-center mb-3">
+      <h2 class="text-4xl font-bold mb-4 text-neutral-950 pl-2 uppercase">{label}</h2>
+
+      {showLink && (
+        <a href={projectsRoute.path} class="btn btn-outline btn-neutral shadow-hard">
+          See All Projects
+        </a>
+      )}
+    </div>
+  )}
+
+  <div class="flex flex-col gap-4">
+    {projects.map((project) => <ProjectListItem project={project} />)}
+  </div>
+</div>

@@ -1,0 +1,101 @@
+---
+import { homeRoute, navigationRoutes } from '../constants/routes';
+import Brand from './icons/Brand.astro';
+import Cross from './icons/Cross.astro';
+import Github from './icons/Github.astro';
+import Linkedin from './icons/Linkedin.astro';
+import Menu from './icons/Menu.astro';
+
+const currentPath = Astro.url.pathname;
+---
+<div>
+  <div
+    class="max-w-screen-xl h-18 p-2 md:p-4 flex md:grid grid-cols-3 items-center justify-between shadow-hard rounded-xl border-2 border-neutral-950 bg-white fixed w-full left-1/2 -translate-x-1/2 top-0 md:top-6 z-navigation"
+  >
+    <div class="bg-neutral-950 rounded-full w-8 h-8 flex items-center justify-center">
+      <a class="font-bold text-xl text-white" href={homeRoute.path}>
+        <Brand class="w-8 h-8" />
+      </a>
+    </div>
+
+    <div class="hidden md:flex gap-8 place-content-center">
+      {navigationRoutes.map((route) => (
+        <a
+          href={route.path}
+          class:list={["text-lg", currentPath === route.path && "font-bold underline"]}
+        >
+          {route.label}
+        </a>
+      ))}
+    </div>
+
+    <div class="hidden md:flex gap-2 place-content-end">
+      <a href="https://github.com/darrenpaul/" class="text-lg" target="_blank" rel="noreferrer noopener">
+        <Github class="w-8 h-8" />
+      </a>
+      <a href="https://www.linkedin.com/in/darren-paul-16765ab2/" class="text-lg" target="_blank" rel="noreferrer noopener">
+        <Linkedin class="w-8 h-8" />
+      </a>
+    </div>
+
+    <button id="menu-open-btn" type="button" class="btn md:hidden btn-ghost btn-square drawer-button" aria-label="Open menu">
+      <Menu class="w-8 h-8" />
+    </button>
+  </div>
+
+  <div class="drawer">
+    <input id="navigation-drawer" type="checkbox" class="drawer-toggle" />
+    <div class="drawer-side z-drawer">
+      <label for="navigation-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+      <div class="flex flex-col justify-between bg-white min-h-full w-80 p-4">
+        <div>
+          <div class="flex justify-end items-center">
+            <button id="menu-close-btn" type="button" class="btn btn-ghost btn-square drawer-button" aria-label="Close menu">
+              <Cross class="w-8 h-8 fill-neutral-950" />
+            </button>
+          </div>
+
+          <div class="flex flex-col gap-2 mx-auto w-fit h-full">
+            {navigationRoutes.map((route) => (
+              <a
+                href={route.path}
+                class:list={["text-4xl", currentPath === route.path && "font-bold underline"]}
+              >
+                {route.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div class="flex gap-4 items-center justify-center">
+          <a href="https://github.com/darrenpaul/" class="text-lg" target="_blank" rel="noreferrer noopener">
+            <Github class="w-8 h-8" />
+          </a>
+          <a href="https://www.linkedin.com/in/darren-paul-16765ab2/" class="text-lg" target="_blank" rel="noreferrer noopener">
+            <Linkedin class="w-8 h-8" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const drawer = document.getElementById('navigation-drawer') as HTMLInputElement | null;
+  const openBtn = document.getElementById('menu-open-btn');
+  const closeBtn = document.getElementById('menu-close-btn');
+
+  openBtn?.addEventListener('click', () => {
+    if (drawer) drawer.checked = true;
+  });
+  closeBtn?.addEventListener('click', () => {
+    if (drawer) drawer.checked = false;
+  });
+
+  // Close drawer when any link inside is clicked
+  document.querySelectorAll('.drawer-side a').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (drawer) drawer.checked = false;
+    });
+  });
+</script>

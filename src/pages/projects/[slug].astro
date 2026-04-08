@@ -1,0 +1,129 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Link from '../../components/icons/Link.astro';
+import { getProjects } from '../../lib/queries/projects';
+import type { Project } from '../../types/project';
+
+export async function getStaticPaths() {
+  const projects = await getProjects();
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+<BaseLayout title={`${project.title} — Darren Paul`} description={project.description}>
+  <article class="min-h-screen pt-24 pb-24">
+    <!-- 1. Breadcrumb / back link: low prominence, high availability -->
+    <div class="max-w-5xl mx-auto px-4 mb-10">
+      <a
+        href="/projects"
+        class="inline-flex items-center gap-2 text-sm font-semibold text-neutral-600 hover:text-neutral-950 transition-colors"
+      >
+        <span aria-hidden="true">&larr;</span>
+        Back to projects
+      </a>
+    </div>
+
+    <!-- 2. Title block: clear hierarchy, text on solid bg (not image) -->
+    <header class="max-w-5xl mx-auto px-4 mb-12">
+      <p class="text-xs font-bold uppercase tracking-[0.2em] text-sky-700 mb-5">
+        Project
+      </p>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-black text-neutral-950 leading-[1.05] tracking-tight mb-6 max-w-3xl">
+        {project.title}
+      </h1>
+      <p class="text-lg md:text-xl text-neutral-700 leading-relaxed max-w-2xl">
+        {project.description}
+      </p>
+
+      <!-- Primary action: single, prominent, above the fold -->
+      {project.liveUri && (
+        <div class="mt-8">
+          <a
+            target="_blank"
+            rel="noreferrer noopener"
+            class="group inline-flex items-center gap-2 px-6 py-3 bg-neutral-950 text-white text-base font-bold rounded-lg border-2 border-neutral-950 shadow-hard hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all"
+            href={project.liveUri}
+          >
+            Visit live site
+            <Link class="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+          </a>
+        </div>
+      )}
+    </header>
+
+    <!-- 3. Hero image: full-bleed framed, supporting not competing -->
+    <figure class="max-w-5xl mx-auto px-4 mb-16 md:mb-20">
+      <div class="bg-white border-2 border-neutral-950 rounded-lg shadow-hard overflow-hidden">
+        <img
+          src={project.thumbnailUri}
+          alt={`Preview of ${project.title}`}
+          class="w-full h-auto object-cover aspect-video"
+          loading="eager"
+        />
+      </div>
+    </figure>
+
+    <!-- 4. Tools: inline meta strip, scannable -->
+    {project.tools.length > 0 && (
+      <section class="max-w-5xl mx-auto px-4 mb-16">
+        <div class="border-t-2 border-b-2 border-neutral-950 py-6">
+          <div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
+            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-neutral-600 md:w-32 shrink-0">
+              Built with
+            </h2>
+            <ul class="flex flex-wrap items-center gap-3">
+              {project.tools.map((tool) => (
+                <li
+                  class="flex items-center gap-2 px-3 py-2 bg-white border-2 border-neutral-950 rounded-md"
+                >
+                  <img
+                    src={tool.iconUri}
+                    alt=""
+                    aria-hidden="true"
+                    class="w-5 h-5 object-contain"
+                  />
+                  <span class="text-sm font-semibold text-neutral-800">{tool.title}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- 5. Content: narrow measure (~65ch) for optimal readability -->
+    {project.content ? (
+      <section class="max-w-[68ch] mx-auto px-4">
+        <div
+          class="tiptap text-lg text-neutral-800 leading-[1.75]"
+          set:html={project.content}
+        />
+      </section>
+    ) : (
+      <section class="max-w-[68ch] mx-auto px-4">
+        <p class="text-neutral-500 italic text-center">
+          More details on this project coming soon.
+        </p>
+      </section>
+    )}
+
+    <!-- 6. Bottom nav: return exit, matching entry -->
+    <div class="max-w-5xl mx-auto px-4 mt-20 pt-10 border-t border-neutral-300">
+      <a
+        href="/projects"
+        class="inline-flex items-center gap-2 text-sm font-semibold text-neutral-600 hover:text-neutral-950 transition-colors"
+      >
+        <span aria-hidden="true">&larr;</span>
+        Back to projects
+      </a>
+    </div>
+  </article>
+</BaseLayout>
