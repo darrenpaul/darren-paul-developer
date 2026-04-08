@@ -1,0 +1,51 @@
+---
+import type { Project } from '../../types/project';
+import { projectsRoute } from '../../constants/routes';
+import { joinUrlDirectories } from '../../lib/util/url-directory-join';
+import Link from '../icons/Link.astro';
+import Magnifier from '../icons/Magnifier.astro';
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+const projectHref = joinUrlDirectories([projectsRoute.path, project.slug]);
+---
+<div class="bg-white rounded-lg p-4 shadow-hard border-2 border-neutral-950 flex flex-col gap-2">
+  <img
+    src={project.thumbnailUri}
+    alt={`${project.title} Thumbnail`}
+    class="w-full h-72 object-cover rounded-md shrink-0 col-span-2"
+  />
+
+  <div class="py-6 pr-0 md:pr-6 flex flex-col gap-4 col-span-3">
+    <div class="flex flex-col justify-between items-center gap-4">
+      <p class="text-3xl font-bold uppercase">{project.title}</p>
+
+      <div class="flex gap-4">
+        <a
+          class="btn btn-circle btn-neutral p-2 flex items-center justify-center rounded-full shadow-hard border-2 border-neutral-950"
+          href={projectHref}
+          aria-label={`View ${project.title} page`}
+        >
+          <Magnifier class="w-6 h-6 fill-white" />
+        </a>
+
+        {project.liveUri && (
+          <a
+            rel="noreferrer noopener"
+            target="_blank"
+            class="btn btn-circle btn-neutral p-2 flex items-center justify-center rounded-full shadow-hard border-2 border-neutral-950"
+            href={project.liveUri}
+            aria-label={`View ${project.title} live site`}
+          >
+            <Link class="w-6 h-6 fill-white" />
+          </a>
+        )}
+      </div>
+    </div>
+
+    <p class="max-w-[80ch] text-neutral-950 text-center">{project.description}</p>
+  </div>
+</div>
